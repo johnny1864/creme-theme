@@ -1,0 +1,89 @@
+.home {
+
+    .gheader {
+
+        &.sticky--scrolled {
+            svg path {
+                fill: $purple;
+            }
+        }
+
+        @media screen and (min-width: $laptop) {
+            &:not(.sticky--scrolled) {
+                .menu-item__link {
+                    color: $cream;
+                }
+            }
+        }
+    }
+
+    .hero {
+        padding-top: 6rem;
+
+        @media screen and (min-width: $laptop) {
+            padding-top: 8rem;
+            padding-bottom: 3rem;
+
+            &__cta {
+                padding-top: 6rem;
+            }
+        }
+
+        img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        &__title {
+            color: $cream;
+        }
+
+        &__content {
+            color: $white;
+            max-width: 350px;
+            margin: 0 auto;
+            display: none;
+
+            @media screen and (min-width: $laptop) {
+                display: block;
+            }
+        }
+
+        &__left-text {
+            text-align: right;
+            padding-bottom: 3rem;
+            padding-right: 2rem;
+        }
+
+        &__right-text{
+            padding: 3rem 1.5rem;
+        }
+
+        &__left-text,
+        &__right-text {
+            display: block;
+            color: $red;
+        }
+    }
+
+    .section, 
+    section {
+        margin-top: 0;
+        &__header {
+            padding-bottom: 2rem;
+            
+            @media screen and (min-width: $laptop) {
+                padding: 0;
+                padding-bottom: 6rem;
+            }
+        }
+    }
+}

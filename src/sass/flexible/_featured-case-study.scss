@@ -1,0 +1,61 @@
+.featured-case-studies {
+
+    .section__header {
+
+        .headline-1 {
+            @media screen and (min-width: $laptop) {
+                width: 80%;
+                margin-left: auto;
+            }
+        }
+
+        .headline-2 {
+            text-align: right;
+        }
+
+        &-label {
+            color: $gray;
+            margin-bottom: 3rem;
+        }
+
+        @media screen and (min-width: $laptop) {
+            &-label {
+                position: absolute;
+                top: 18rem;
+                left: 10%;
+            }
+
+            &--wrapper {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    bottom: 0;
+                    left: 1.5rem;
+                }
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            &-label {
+                left: 20%;
+            }
+        }
+    }
+
+
+    &__cta {
+        margin-top: 3rem;
+
+        @media screen and (min-width: $laptop) {
+            margin-top: 5rem;
+        }
+
+        a {
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: $red;
+        }
+    }
+
+}

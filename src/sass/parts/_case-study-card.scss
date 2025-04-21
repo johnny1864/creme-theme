@@ -1,0 +1,53 @@
+.case-study-card {
+    position: relative;
+
+    &__thumb {
+        display: block;
+        aspect-ratio: 10/11;
+
+        @media screen and (min-width: $laptop) {
+            aspect-ratio: 13/7;
+        }
+    }
+
+    &__title,
+    p,
+    .btn {
+        transition: all ease 200ms;
+    }
+
+    &__content {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 1rem;
+
+        @media screen and (min-width: $laptop) {
+            padding: 1.5rem;
+
+            .btn {
+                position: absolute;
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            &:hover {
+                .case-study-card__title,
+                p {
+                    color: $white;
+                }
+
+                .btn {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

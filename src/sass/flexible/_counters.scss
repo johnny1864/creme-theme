@@ -1,0 +1,89 @@
+.counters {
+    padding-left: 0;
+    padding-right: 0;
+
+    .section__header {
+        padding: 0 1.5rem 2rem;
+        h2{
+          padding-top: 1rem;
+          border-top: 1px solid rgba($color: $off-white, $alpha: 0.60);  
+        }
+        @media screen and (min-width: $laptop) {
+            padding: 0;
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__block {
+        display: block;
+        text-decoration: none;
+        color: $purple;
+        padding: 1rem 1.5rem;
+        border-bottom: 1px solid rgba($color: $off-white, $alpha: 0.40);
+
+        @media screen and (min-width: $laptop) {
+            transition: all 300ms ease;
+            padding: 2rem 3rem;
+            &-wrapper {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+
+            &:hover {
+                background-color: $red;
+                * {
+                    color: $white;
+                }
+            }
+        }
+
+        &-count {
+            color: $red;
+            line-height: 1.2;
+            @media screen and (min-width: $laptop) {
+                margin-right: 1.5rem;
+
+            }
+        }
+
+        &-title {
+            h3 {
+                margin-top: 0;
+            }
+
+            @media screen and (min-width: $laptop) {
+                display: flex;
+                align-items: flex-start;
+                width: 49%;
+
+            }
+        }
+
+        &-cta-text {
+            font-size: 0.9rem;
+        }
+
+        &-content {
+            p {
+                letter-spacing: -0.5px;
+            }
+            @media screen and (min-width: $laptop) {
+                display: flex;
+                justify-content: space-between;
+                width: 49%;
+                p {
+                    padding-right: 2rem;
+                    width: 75%;
+
+                }
+                .counters__block-cta-text {
+                    align-self: center;
+                    width: 20%;
+                }
+            }
+        }
+    }
+}

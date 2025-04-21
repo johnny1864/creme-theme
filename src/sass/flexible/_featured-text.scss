@@ -1,0 +1,21 @@
+.featured-text {
+    background-color: $red;
+    
+    h2, 
+    .h2 {
+        color: $cream;
+    }
+
+    @media screen and (min-width: $laptop) {
+        &__text {
+            text-indent: 12rem;
+        }
+    }
+
+    @media screen and (min-width: $desktop_lg) {
+        &__text {
+            text-indent: 15rem;
+            padding-right: 3rem;
+        }
+    }
+}

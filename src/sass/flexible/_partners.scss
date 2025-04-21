@@ -1,0 +1,50 @@
+.partners {
+    &__grid {
+        @media screen and (min-width: $laptop) {
+            padding: 0 3rem;
+        }
+
+        &-item {
+            position: relative;
+            display: inline-block;
+
+            figure {
+                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                top: -40px;
+                right: 1.1rem;
+                width: 120px;
+                aspect-ratio: 1/1;
+                transform: translateX(100%);
+                pointer-events: none;
+                background-color: $cream;
+                z-index: 2;
+                padding: 0.5rem;
+                opacity: 0;
+                transition: opacity 200ms ease;
+            } 
+
+
+            @media screen and (min-width: $laptop) {
+                &.has-image {
+                    span {
+                        color: $red;
+                    }
+                }
+            }
+
+            &:hover {
+                &.has-image {
+                    figure {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+
+          
+    }
+}

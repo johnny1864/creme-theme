@@ -9,6 +9,9 @@
     @media screen and (min-width: $laptop) {
         &__text {
             text-indent: 12rem;
+            span {
+                color: $purple;
+            }
         }
     }
 

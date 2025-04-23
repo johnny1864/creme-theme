@@ -57,21 +57,45 @@
             }
         }
 
+        &__left-text,
+        &__right-text {
+            display: block;
+            color: $red;
+        }
+
         &__left-text {
             text-align: right;
             padding-bottom: 3rem;
             padding-right: 2rem;
         }
 
-        &__right-text{
+        &__right-text {
             padding: 3rem 1.5rem;
         }
 
-        &__left-text,
-        &__right-text {
-            display: block;
-            color: $red;
+        @media screen and (min-width: $laptop) {
+            &__left-text,
+            &__right-text {
+                pointer-events: none;
+            }
+            
+            &__left-text {
+                text-align: start;
+            }
+
+            &__right-text {
+                text-align: right;
+            }
         }
+
+        @media screen and (min-width: $laptop) {
+            &__left-text {
+                position: absolute;
+
+            }
+        }
+
+        
     }
 
     .section, 

@@ -1,4 +1,12 @@
 .partners {
+
+    .section__header {
+        h2 {
+          padding-top: 1rem;
+          border-top: 1px solid rgba($color: $off-white, $alpha: 0.60);
+        }
+    }
+
     &__grid {
         @media screen and (min-width: $laptop) {
             padding: 0 3rem;

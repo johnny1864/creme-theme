@@ -80,6 +80,15 @@
                 text-transform: uppercase;
             }
 
+            input[type="submit"] {
+                background-color: $purple;
+                color: $cream;
+                &:hover {
+                    background: $cream;
+                    color: $purple;
+                }
+            }
+
             input {
                 width: 100%;
             }
@@ -103,12 +112,14 @@
     &__socials {
         border-bottom: 1px solid $cream;
         padding: 0.5rem 0;
+
         @media screen and (min-width: $laptop) {
             padding-top: 8rem;
             ul {
                 display: flex;      
             }
         }
+
         &-item {
             position: relative;
             a {

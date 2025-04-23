@@ -476,7 +476,29 @@ jQuery(document).ready(function ($) {
 
     }());
 
-    var mouseEffect = (function(){
+    var HomeHero = (function(){
+
+        var hero = $('.hero--home');
+
+        if(!hero.length){return}
+
+        console.log("hero image");
+        var bgImage = hero.find('img');
+        var leftText = hero.find('.hero__left-text');
+        var rigthText = hero.find('.hero__right-text');
+
+        $(window).on('scroll', function () {
+            if(window.innerWidth > 960){
+                var scrollTop = $(window).scrollTop();
+                bgImage.css('transform', 'translateY(' + (scrollTop * 0.3) + 'px)');
+                leftText.css('transform', 'translateY(' + (scrollTop * 0.6) + 'px)');
+                rigthText.css('transform', 'translateY(' + (scrollTop * 0.2) + 'px)');
+            }
+        });
+
+    }())
+
+    var MouseButtonEffect = (function(){
         var hoverWrapper = $('.hover-wrapper');
 
         if(!hoverWrapper.length){return}

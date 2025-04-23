@@ -3,7 +3,7 @@
 
     if(!empty(get_post_thumbnail_id())) $thumbnail_id = get_post_thumbnail_id();
 
-    $feat_img = getIMG($thumbnail_id, 'lg');
+    $feat_img = getIMG($thumbnail_id, 'xl');
     $permalink = get_the_permalink();
 ?>
 

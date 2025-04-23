@@ -21,7 +21,7 @@
         @media screen and (min-width: $laptop) {
             &-label {
                 position: absolute;
-                top: 18rem;
+                top: 17rem;
                 left: 10%;
             }
 
@@ -41,11 +41,17 @@
                 left: 20%;
             }
         }
+
+        @media screen and (min-width: $desktop_lg) {
+            &-label {
+                left: 23%;
+            }
+        }
     }
 
 
     &__cta {
-        margin-top: 3rem;
+        margin-top: 2rem;
 
         @media screen and (min-width: $laptop) {
             margin-top: 5rem;

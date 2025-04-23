@@ -8,6 +8,10 @@
             position: relative;
             display: inline-block;
 
+            @media screen and (max-width: $mobile) {
+                font-size: $heading_h3__mobile;
+            }
+
             figure {
                 position: absolute;
                 display: flex;

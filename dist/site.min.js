@@ -502,6 +502,43 @@ jQuery(document).ready(function ($) {
 
     }());
 
+
+    var TextScrollAnimation = (function() {
+        const words = document.querySelectorAll(".featured-text__text span");
+
+        if (!words.length) {
+            return;
+        }
+
+        gsap.registerPlugin(SplitText)
+
+        const splitWords = [];
+
+        words.forEach((word) => {
+            const splitWord = new SplitText(word, {
+                type: "chars",
+            });
+
+            splitWords.push(splitWord.chars);
+        });
+
+        gsap.to(splitWords, {
+            color: "#ff6642",
+            ease: "power3.inOut",
+            duration: 0.8,
+            stagger: {
+                each: 0.075,
+            },
+            scrollTrigger: {
+                end: "top 25%",
+                trigger: words[0],
+                start: "top bottom-=25%",
+                scrub: 0.5,
+            },
+        });
+
+    })
+
     var LoadMore = (function () {
 
         var $loadmore = $('#loadmore');

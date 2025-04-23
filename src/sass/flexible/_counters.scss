@@ -3,7 +3,7 @@
     padding-right: 0;
 
     .section__header {
-        padding: 0 1.5rem 2rem;
+        padding: 0 1rem 2rem;
         h2{
           padding-top: 1rem;
           border-top: 1px solid rgba($color: $off-white, $alpha: 0.60);  
@@ -18,7 +18,7 @@
         display: block;
         text-decoration: none;
         color: $purple;
-        padding: 1rem 1.5rem;
+        padding: 1rem;
         border-bottom: 1px solid rgba($color: $off-white, $alpha: 0.40);
 
         @media screen and (min-width: $laptop) {
@@ -41,8 +41,11 @@
         }
 
         &-count {
+            display: inline-block;
+            margin-bottom: 1rem;
             color: $red;
             line-height: 1.2;
+
             @media screen and (min-width: $laptop) {
                 margin-right: 1.5rem;
 
@@ -52,6 +55,7 @@
         &-title {
             h3 {
                 margin-top: 0;
+                margin-bottom: 1.25rem;
             }
 
             @media screen and (min-width: $laptop) {
@@ -67,9 +71,12 @@
         }
 
         &-content {
+
             p {
                 letter-spacing: -0.5px;
+                margin-bottom: 1rem;
             }
+
             @media screen and (min-width: $laptop) {
                 display: flex;
                 justify-content: space-between;

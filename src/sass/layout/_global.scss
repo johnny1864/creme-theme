@@ -499,3 +499,22 @@ code {
         color: $white;
     }
 }
+
+.hover-wrapper {
+    position: relative;
+
+    @media screen and (min-width: $laptop) {
+        .btn {
+            position: absolute;
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        &:hover {
+            .btn {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    }
+}

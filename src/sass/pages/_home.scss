@@ -88,10 +88,11 @@
             }
         }
 
-        @media screen and (min-width: $laptop) {
+        @media screen and (min-width: $desktop_lg) {
             &__left-text {
                 position: absolute;
-
+                top: 25%;
+                left: 0;
             }
         }
 

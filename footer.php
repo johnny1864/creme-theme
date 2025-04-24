@@ -42,9 +42,11 @@
             </div>
 
             <div class="gfooter__headline hover-wrapper">
+                
                 <h2 class="h1">
                     <?php echo $headline ?>
                 </h2>
+                <a class="site-logo desk-only" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
                 <?php if(!empty($cta)):?>
                     
                     <a
@@ -58,7 +60,7 @@
                 <?php endif; ?>
             </div>
 
-            <div class="row position-relative">
+            <div class="row position-relative row__wrapper">
                 <div class="gfooter__newsletter">
                     <h6 class="gfooter__newsletter-title">
                         <?php echo $newsletter_signup_copy; ?>

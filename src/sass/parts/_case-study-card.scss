@@ -1,9 +1,25 @@
 .case-study-card {
     position: relative;
 
+    &--white {
+        .case-study-card__title,
+        p,
+        .btn {
+            color: $white;
+        }
+    }
+
     &__thumb {
         display: block;
         aspect-ratio: 10/11;
+
+        img.mob-only {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+        }
 
         @media screen and (min-width: $laptop) {
             aspect-ratio: 13/7;
@@ -28,6 +44,12 @@
         justify-content: center;
         padding: 1rem;
 
+        .btn {
+            background-color: rgba($color: $white, $alpha: 0.20);
+            backdrop-filter: blur(10px);
+            white-space: nowrap;
+        }
+
         @media screen and (min-width: $laptop) {
             padding: 1.5rem;
 
@@ -38,10 +60,6 @@
             }
 
             &:hover {
-                .case-study-card__title,
-                p {
-                    color: $white;
-                }
 
                 .btn {
                     transform: scale(1);

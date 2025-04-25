@@ -9,17 +9,21 @@
     &__headline {
         position: relative;
         padding: 1.5rem 0;
-        @media screen and (min-width: $laptop){
+
+        @media screen and (min-width: $laptop) {
             padding: 3rem 0 4rem;
+
             .site-logo {
                 position: absolute;
                 top: 3rem;
                 right: 0;
             }
         }
+
         h2 {
             color: $cream;
         }
+
         .btn {
             margin-top: 1.5rem;
         }
@@ -40,7 +44,8 @@
         }
     }
 
-    &__content, &__bottom {
+    &__content,
+    &__bottom {
         padding: 2rem 1rem;
         overflow: hidden;
 
@@ -75,7 +80,7 @@
             padding: 1.5rem 0;
             max-width: 250px;
         }
-        
+
         &-title {
             color: $cream;
         }
@@ -92,11 +97,13 @@
             }
 
             input[type="submit"] {
-                background-color: $purple;
-                color: $cream;
+                background: $cream;
+                color: $purple;
+
                 &:hover {
-                    background: $cream;
-                    color: $purple;
+                    background-color: $purple;
+                    color: $cream;
+
                 }
             }
 
@@ -127,13 +134,15 @@
 
         @media screen and (min-width: $laptop) {
             padding-top: 8rem;
+
             ul {
-                display: flex;      
+                display: flex;
             }
         }
 
         &-item {
             position: relative;
+
             a {
                 display: block;
                 padding: 0.5rem 0;
@@ -150,7 +159,7 @@
             }
 
             @media screen and (min-width: $laptop) {
-                
+
                 a {
                     padding-right: 3rem;
                     width: 150px;
@@ -158,8 +167,8 @@
 
                 &:hover {
                     img {
-                       opacity: 1; 
-                       pointer-events: all;
+                        opacity: 1;
+                        pointer-events: all;
                     }
                 }
             }

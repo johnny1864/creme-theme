@@ -559,7 +559,7 @@ jQuery(document).ready(function ($) {
             },
         });
 
-    })
+    });
 
     var LoadMore = (function () {
 

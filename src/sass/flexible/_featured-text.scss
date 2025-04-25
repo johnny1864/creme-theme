@@ -6,18 +6,26 @@
         color: $cream;
     }
 
+    &__text {
+        text-transform: unset;
+    }
+
     @media screen and (min-width: $laptop) {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+        
         &__text {
             text-indent: 12rem;
+            
             span {
                 color: $purple;
             }
         }
     }
 
-    @media screen and (min-width: $desktop_lg) {
+    @media screen and (min-width: 1450px) {
         &__text {
-            text-indent: 15rem;
+            text-indent: 30%;
             padding-right: 3rem;
         }
     }

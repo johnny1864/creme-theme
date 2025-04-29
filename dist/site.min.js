@@ -561,6 +561,55 @@ jQuery(document).ready(function ($) {
 
     });
 
+    var Testimonials = (function() {
+
+        const sliders = document.querySelectorAll(".testimonials-slider .swiper");
+
+        if (sliders.length < 1) {
+            return;
+        }
+        
+        sliders.forEach((slider) => {
+            const slidesQuantity =
+                slider.querySelectorAll(".swiper-slide").length;
+            const section = slider.closest('.testimonials-slider');
+
+            var swiper = new Swiper(slider, {
+                spaceBetween: 4,
+                slidesPerView: 1,
+                draggable: true,
+                pagination: {
+                    el: slider.querySelector(".swiper-pagination"),
+                    clickable: true,
+                },
+                on: {
+                    init: function () {
+                        slider.querySelector(".swiper-counter").textContent =
+                            this.realIndex + 1 + "/" + slidesQuantity;
+                    },
+                    slideChange: function () {
+                        slider.querySelector(".swiper-counter").textContent =
+                            this.realIndex + 1 + "/" + slidesQuantity;
+                            $(slider).find('.testimonials__brands-btn').removeClass('active');
+                            console.log(this.realIndex);
+                            $(slider).find(`.testimonials__brands-btn[data-index=${this.realIndex}]`).addClass('active');
+                    },
+                },
+            });
+
+           section
+                .querySelectorAll(".testimonials__brands-btn")
+                .forEach((navItem, index) => {
+                    navItem.addEventListener("click", () => {
+                        swiper.slideToLoop(index);
+
+                        //$(slider).find('.testimonials__brands-btn').removeClass('active');
+                        // navItem.classList.add("active");
+                    });
+                });
+        });
+    }())
+
     var LoadMore = (function () {
 
         var $loadmore = $('#loadmore');

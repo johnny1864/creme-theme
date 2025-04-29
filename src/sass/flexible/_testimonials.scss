@@ -1,0 +1,88 @@
+.testimonials {
+
+    &-slider {
+        .section__header {
+            border-top: 1px solid $gray;
+            padding: 1rem 0 1.5rem;
+        }
+
+        .swiper-buttons {
+            font-family: $heading_font;
+            font-size: 1.25rem;
+            padding: 1rem 0 1.5rem;
+            text-align: right;
+        }
+        
+
+    }
+
+    &__quote-mark {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    &__brands {
+        display: flex;
+        margin-top: 3rem;
+
+        @media screen and (min-width: $laptop) {
+            margin-top: 5rem;
+        }
+
+        &-btn {
+            color: $gray;
+            padding: 0.5rem 0;
+            padding-right: 1rem;
+            border: none;
+            border-bottom: 1px solid;
+            text-transform: uppercase;
+            background-color: transparent;
+            transition: all 200ms ease;
+
+            @media screen and (min-width: $laptop) {
+                padding-right: 3rem;
+            }
+
+            &.active {
+                color: $red;
+
+            }
+            
+        }
+    }
+
+    
+
+    &__card {
+
+        @media screen and (min-width: $laptop) {
+            padding-right: 2.5rem;
+        }
+
+        &-meta {
+            display: flex;
+            align-items: center;
+            padding-top: 1.5rem;
+        }
+
+        &-author {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            padding-left: 1rem;
+        }
+
+        &-author-icon {
+            position: relative;
+            display: inline-block;
+            height: 2rem;
+            width: 2rem;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        &-quote {
+            text-transform: unset;
+        }
+    }
+}

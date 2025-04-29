@@ -22,6 +22,10 @@ if($isHome){
     if($post_type)  $classList[] = 'hero--'.$post_type;
 }
 
+if( $hero['style'] == "animated"){
+    $feat_img = getIMG($feat_img_id, 'xl');
+} 
+
 if (is_404()) {
     $title = 'Page Not Found';
 } elseif($hero['headline']) {

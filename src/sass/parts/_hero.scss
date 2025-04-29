@@ -1,7 +1,12 @@
 .hero {
+    padding-top: 6rem;
     background-size: cover;
 
     &__content {
         margin-top: 2rem;
+    }
+
+    &--animated {
+        
     }
 }

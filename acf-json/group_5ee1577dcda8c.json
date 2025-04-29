@@ -35,7 +35,8 @@
                     "choices": {
                         "none": "None",
                         "basic": "Basic",
-                        "home": "Home"
+                        "home": "Home",
+                        "animated": "Animated"
                     },
                     "default_value": "none",
                     "return_format": "value",
@@ -110,7 +111,15 @@
                     "type": "text",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6218778dc4141",
+                                "operator": "==",
+                                "value": "home"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "50",
                         "class": "",
@@ -131,7 +140,15 @@
                     "type": "text",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_6218778dc4141",
+                                "operator": "==",
+                                "value": "home"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "50",
                         "class": "",
@@ -209,5 +226,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745448691
+    "modified": 1745610567
 }

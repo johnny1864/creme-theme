@@ -49,7 +49,7 @@
                     <span class="swiper-counter"></span>  
                 </div>
 
-                <span class="h1 testimonials__quote-mark desk-only">"</span>
+                <span class="h1 testimonials__quote-mark desk-only">&#8220;</span>
                 <div class="testimonials__brands">
                     <?php foreach ( $testimonials as $index => $testimonial ) : ?>
                         <button data-index="<?php echo $index; ?>" class="testimonials__brands-btn <?php if($index == 0) echo 'active'; ?>">

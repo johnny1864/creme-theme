@@ -1,0 +1,45 @@
+.team-card {
+    &__thumb {
+        position: relative;
+        aspect-ratio: 33 / 50;
+
+        .btn {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            transition: all ease 200ms;
+        }
+
+        @media screen and (min-width: $laptop) {
+            aspect-ratio: 386 / 589;
+
+            .btn {
+                opacity: 0;
+            }
+
+            img {
+                transition: all ease 200ms;
+            }
+
+            &:hover {
+                img {
+                    filter: grayscale(1);
+                }
+                .btn {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__content {
+        padding: 1rem 0;
+    }
+
+    &__title {
+        font-size: 1.1rem;
+        text-transform: uppercase;
+    }
+
+    
+}

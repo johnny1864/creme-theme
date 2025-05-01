@@ -4,6 +4,9 @@
         .section__header {
             border-top: 1px solid $gray;
             padding: 1rem 0 1.5rem;
+            @media screen and (min-width: $laptop) {
+                padding-bottom: 5rem;
+            }
         }
 
         .swiper-buttons {

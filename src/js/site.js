@@ -359,6 +359,7 @@ jQuery(document).ready(function ($) {
                 $text.text('Close');
                 $nav.addClass('active');
                 $body.addClass('no-scroll');
+                $header.addClass('mobile-menu-open');
 
                 var styles = { position: 'fixed' };
                 if ($adminBar.length) { styles.top = $adminBar.innerHeight(); }
@@ -372,6 +373,7 @@ jQuery(document).ready(function ($) {
                 $text.text('Menu');
                 $nav.removeClass('active').find('.active').removeClass('active');
                 $body.removeClass('no-scroll');
+                $header.removeClass('mobile-menu-open');
 
                 var styles = { position: 'fixed' };
                 if ($adminBar.length) { styles.top = $adminBar.innerHeight() };
@@ -609,6 +611,27 @@ jQuery(document).ready(function ($) {
                 });
         });
     }())
+
+    var TeamSlider = (function(){
+        var $section = $('.team-members');
+        if (!$section.length) { return; }
+
+        $section.each(function () {
+            var $this = $(this);
+
+            var swiper = new Swiper($this.find('.swiper').get(0), {
+                spaceBetween: 16,
+                slidesPerView: 1,
+                loop: true,
+                breakpoints: {
+                    960: {
+                        slidesPerView: 3
+                    }
+                },
+            });
+        });
+
+    }());
 
     var LoadMore = (function () {
 

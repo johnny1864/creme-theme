@@ -276,6 +276,13 @@ button {
         margin-right: 0.5rem;
     }
 
+    &--blur {
+        background-color: rgba($color: $white, $alpha: 0.20);
+        backdrop-filter: blur(10px);
+        white-space: nowrap;
+        color: $white;
+    }
+
     &--sm,
     &--small {
         padding: .5rem;

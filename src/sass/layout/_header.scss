@@ -51,6 +51,18 @@
 
 @media (max-width: $laptop - 1) {
     .gheader {
+        transition: all 200ms ease;
+        &.mobile-menu-open {
+            background-color: $cream;
+            svg path {
+                fill: $purple;
+            }
+
+            .btn {
+                background-color: $purple;
+                color: $cream;
+            }
+        }
 
         &__logo {
             margin-right: auto;

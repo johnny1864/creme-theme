@@ -1,0 +1,26 @@
+.team-members{
+
+    .section__header {
+        padding-bottom: 3rem;
+
+        @media screen and (min-width: $laptop) {
+            padding-bottom: 5rem;
+        }
+
+        .display-1{
+            @media screen and (max-width: $mobile) {
+                font-size: 4.6rem;
+            }
+        } 
+    }
+
+    .swiper {
+        padding-right: 1.5rem;
+        overflow: visible;
+
+        @media screen and (min-width: $laptop) {
+            padding: 0 3rem;
+        }
+    }
+    
+}

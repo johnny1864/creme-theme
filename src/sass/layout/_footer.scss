@@ -94,6 +94,11 @@
                 padding-left: 0;
                 font-family: $heading_font;
                 text-transform: uppercase;
+
+                &::placeholder {
+                    color: $cream;
+                    opacity: 1;
+                }
             }
 
             input[type="submit"] {

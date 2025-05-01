@@ -29,7 +29,7 @@
                         <?php  
                             if(!empty($item['hover_image'])) {
                                 $image_id = $item['hover_image']['id'];
-                                echo getIMG($image_id, 'md'); 
+                                echo getIMG($image_id, 'lg'); 
                             }
                         ?>
                         <span>

@@ -1,0 +1,51 @@
+.two-col-counters {
+    &__block {
+        display: flex;
+        padding: 1rem 0;
+        border-top: 1px solid rgba($gray, 0.4);
+
+        &-title {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+
+        &-count {
+            color: $red;
+        }
+
+        @media screen and (min-width: $laptop) {
+            &-title {
+                flex-direction: row;
+
+                h6 {
+                    width: 80%;
+                }
+            }
+            
+            &-count {
+                width: 20%;
+            }
+
+            &-content {
+                width: 80%;
+                margin-left: auto;
+            }
+        }
+    }
+
+    &__grid {
+        @media screen and (min-width: $laptop) {
+            display: flex;
+            justify-content: space-around;
+            &-col {
+                width: 45%;
+            }
+        }
+
+        @media screen and (min-width: $desktop_lg) {
+            width: 90%;
+            margin-left: auto;
+        }
+    }
+}

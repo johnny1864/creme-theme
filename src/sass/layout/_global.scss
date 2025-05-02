@@ -315,6 +315,11 @@ button {
         }
     }
 
+    &--grey {
+        background-color: $gray;
+        color: $cream;
+    }
+
     &--outline {
         background: transparent;
         color: $black;

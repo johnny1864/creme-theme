@@ -9,4 +9,38 @@
     &--animated {
         
     }
+
+    &--service {
+        @media screen and (min-width: $laptop) {
+            .hero__title {
+                span {
+                    display: block;
+                    text-align: right;
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
+
+    &__gallery {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+
+        figure {
+            position: relative;
+            aspect-ratio: 1/1;
+            width: calc(33% - 0.25rem);
+        }
+
+        @media screen and (min-width: $laptop) {
+            max-width: 700px;
+            margin: 0 auto;
+            margin-top: 5rem;
+
+            figure {
+                aspect-ratio: 1.5/1;
+            }
+        }
+    }
 }

@@ -19,6 +19,7 @@
         }
 
         @media screen and (min-width: $laptop) {
+
             &-label {
                 position: absolute;
                 top: 17rem;
@@ -51,6 +52,23 @@
 
     .case-study-card {
         margin-bottom: 0.75rem;
+    }
+
+    &__grid {
+        margin-top: 3rem;
+        
+        @media screen and (min-width: $laptop) {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5rem;
+
+            .case-study-card {
+                width: calc(50% - 0.25rem);
+                &__thumb {
+                    aspect-ratio: 16/18;
+                }
+            }
+        }
     }
 
 

@@ -1,0 +1,13 @@
+.single-service {
+    .featured-case-studies {
+        .display-1 {
+            @media screen and (max-width: $mobile) {
+                font-size: 4.5rem;
+                text-align: center;
+                span{
+                    display: none;
+                }
+            }
+        }
+    }
+}

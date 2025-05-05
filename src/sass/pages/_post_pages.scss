@@ -5,5 +5,12 @@
             max-width: $container_md;
         }
     }
+}
 
+.single-post {
+    .page-content {
+        .container {
+            max-width: 720px;
+        }
+    }
 }

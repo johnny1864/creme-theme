@@ -105,6 +105,28 @@
         
     }
 
+    .featured-text {
+        background-color: $red;
+        
+        h2, 
+        .h2 {
+            color: $cream;
+        
+        }
+
+        @media screen and (min-width: $laptop) {
+            &__text {
+                text-indent: 12rem;
+            }
+        }
+
+        @media screen and (min-width: 1450px) {
+            &__text {
+                text-indent: 30%;
+            }
+        }
+    }
+
     .section, 
     section {
         margin-top: 0;

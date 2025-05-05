@@ -6,8 +6,27 @@
         margin-top: 2rem;
     }
 
-    &--animated {
-        
+    &--animated {}
+
+    &--basic {
+        .hero__content {
+            max-width: 350px;
+            color: $red;
+            margin: 0 auto;
+            padding-top: 3rem;
+        }
+
+        @media screen and (min-width: $laptop) {
+            .hero__content {
+                padding-top: 5rem;
+            }
+        }
+
+        @media screen and (min-width: $desktop) {
+            .container {
+                max-width: 1200px;
+            }
+        }
     }
 
     &--service {
@@ -19,6 +38,26 @@
                     padding-right: 1em;
                 }
             }
+        }
+    }
+
+    &__breadcrumbs {
+        text-transform: uppercase;
+        padding: 2rem 0 3rem;
+        font-family: $heading_font;
+        text-transform: uppercase;
+
+        @media screen and (min-width: $laptop) {
+            padding: 3rem 0 4rem;
+        }
+
+        a {
+            color: $gray;
+            text-decoration: none;
+        }
+
+        span {
+            color: red;
         }
     }
 

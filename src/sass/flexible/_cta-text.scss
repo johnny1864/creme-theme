@@ -1,0 +1,42 @@
+.cta-text {
+    .section {
+        &__header {
+            * {
+                color: $red;
+            }
+            .preheading {
+                text-align: left;
+            }
+    
+            @media screen and (min-width: $laptop) {
+                .preheading {
+                    padding-left: 5rem;
+                }
+            }
+            
+            @media screen and (min-width: $desktop) {
+                .preheading {
+                    padding-left: 15%;
+                }
+    
+                h2 {
+                    text-indent: 50%;
+                }
+            }
+        }
+
+        &__content {
+            max-width: 350px;
+            margin: 0 auto;
+            padding-top: 3rem;
+        }
+    }
+
+    .container {
+        @media screen and (min-width: $desktop) {
+            &--medium {
+                max-width: 1200px;
+            }
+        }
+    }
+}

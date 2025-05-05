@@ -242,7 +242,9 @@ h6, .h6 {
 
 .preheading,
 .subheading {
-    font-size: .9rem;
+    font-size: 1.1rem;
+    font-family: $heading_font;
+    text-transform: uppercase;
 }
 
 a {

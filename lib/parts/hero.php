@@ -26,6 +26,10 @@ if( $hero['style'] == "animated"){
     $feat_img = getIMG($feat_img_id, 'xl');
 } 
 
+if($hero['text_align_center']) {
+    $classList[] = 'text-center';
+}
+
 if (is_404()) {
     $title = 'Page Not Found';
 } elseif($hero['headline']) {

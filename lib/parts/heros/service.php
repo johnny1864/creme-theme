@@ -1,6 +1,12 @@
 
 <section <?php echo $classes;?>>
     <div class="container">
+        <div class="hero__breadcrumbs">
+            <a href="/services">
+                Services
+            </a>
+            <span>- <?php echo str_replace(" ", "-", $title); ?></span>
+        </div>
         <h1 class="hero__title"><?php echo $title; ?></h1>
         <?php if(!empty($hero['content'])):?>
         <div class="hero__content"><?php echo $hero['content'];  ?></div>

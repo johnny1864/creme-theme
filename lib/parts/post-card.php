@@ -12,8 +12,7 @@
         <div class="positioner"><?php echo $feat_img; ?></div>
     </a>
     <div class="post-card__content">
-        <h4 class="post-card__title"><?php the_title(); ?></h4>
-        <p class="post-card__excerpt"><?php echo excerpt(30); ?></p>
-        <a class="post-card__link" href="<?php echo $permalink; ?>">Read More</a>
+        <h5 class="post-card__title"><?php the_title(); ?></h5>
+        <!-- <a class="post-card__link" href="<?php echo $permalink; ?>">Read More</a> -->
     </div>
 </article>

@@ -195,6 +195,10 @@ h1, .h1 {
         font-size: $heading_h1;
     }
 
+    @media screen and (max-width: 420px) {
+        font-size: 3.25rem;
+    }
+
 }
 
 h2, .h2 {

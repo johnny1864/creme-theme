@@ -112,6 +112,33 @@ jQuery(document).ready(function ($) {
         })
     }());
 
+    var MobileAccordions = (function () {
+        var $accordions = $('.mob-accordion');
+        if (!$accordions.length) { return; }
+
+        $accordions.each(function () {
+            if ($(this).hasClass('active')) {
+                $(this).find('.mbo-accordion__content').show();
+            }
+        });
+
+        $accordions.find('.mob-accordion__trigger').click(function (e) {
+            var $this = $(this);
+            var $accordion = $this.parent();
+            var $content = $accordion.find('.mob-accordion__content');
+            var $siblings = $accordion.siblings().length ? $accordion.siblings() : $accordions.filter('[data-group="' + $accordion.data('group') + '"]');
+
+            if ($accordion.hasClass('active')) {
+                $accordion.removeClass('active');
+                $content.slideUp('fast');
+            } else {
+                $accordion.addClass('active');
+                $siblings.removeClass('active').find('.mob-accordion__content').slideUp('fast');
+                $content.slideDown('fast');
+            }
+        })
+    }());
+
     var Forms = (function () {
         var InputMasks = (function () {
             var $masks = $('[data-mask]');

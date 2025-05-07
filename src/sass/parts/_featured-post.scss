@@ -1,0 +1,18 @@
+.featured-post {
+    .post-card {
+        @media screen and (min-width: $laptop) {
+            .row {
+                flex-direction: row;
+            }
+
+            &__thumb {
+                width: 50%;
+
+            } 
+
+            &__content {
+                width: 40%;
+            }
+        }
+    }
+}

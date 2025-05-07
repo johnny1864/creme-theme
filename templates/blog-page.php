@@ -8,7 +8,7 @@ get_header();
 $headline = get_field( 'headline' ) ? get_field( 'headline' ) : get_the_title();
 ?>
 
-<?php get_template_part( 'template-parts/blocks/featured-post' ); ?>
+<?php get_template_part( 'lib/parts/featured-post' ); ?>
 
 <section class="blog-roll">
     <div class="container">
@@ -16,12 +16,14 @@ $headline = get_field( 'headline' ) ? get_field( 'headline' ) : get_the_title();
             <p class="blog-roll-sort__label heading-font">CATEGORIES</p>
 
             <div class="categories-filter">
+            <button data-cat="all"
+            class="category-tag">All Categories</button>
                 <?php
                 $categories = get_categories();
                 if ( ! empty( $categories ) ) :
                     foreach ( $categories as $cat ) : ?>
                         <button data-cat="<?php echo strtolower( str_replace( ' ', '-', $cat->name ) ); ?>"
-                            class="category-tag overflow-hidden text-uppercase d-inline-block mr-4"><?php echo $cat->name; ?></button>
+                            class="category-tag"><?php echo $cat->name; ?></button>
                     <?php endforeach;
                 endif;
                 ?>

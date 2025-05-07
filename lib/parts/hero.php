@@ -22,7 +22,7 @@ if($isHome){
     if($post_type)  $classList[] = 'hero--'.$post_type;
 }
 
-if( $hero['style'] == "animated"){
+if( $hero['style'] == "animated" || $hero['style'] == "full-image" ){
     $feat_img = getIMG($feat_img_id, 'xl');
 } 
 

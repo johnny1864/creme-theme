@@ -2,6 +2,16 @@
     padding-top: 6rem;
     background-size: cover;
 
+    .preheading {
+        color: $red;
+        margin-bottom: 2rem;
+        
+        @media screen and (min-width: $laptop) {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+    }
+
     &__content {
         margin-top: 2rem;
     }
@@ -17,6 +27,7 @@
         }
 
         @media screen and (min-width: $laptop) {
+            padding-top: 8rem;
             .hero__content {
                 padding-top: 5rem;
             }

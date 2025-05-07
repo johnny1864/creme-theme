@@ -3,7 +3,7 @@
     &__thumb {
         background-color: $xlgray;
         display: block;
-        aspect-ratio: 4/3;
+        aspect-ratio: 5/4;
         position: relative;
         margin-bottom: 1rem;
         width: 100%;
@@ -35,7 +35,18 @@
         }
 
         &__thumb {
+            overflow: hidden;
             width: 40%;
+            margin-bottom: 0;
+            img {
+                transition: all 500ms ease;
+            }
+
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
         } 
 
         &__title {
@@ -50,6 +61,12 @@
             a {
                 margin-top: auto;
             }
+        }
+    }
+
+    @media screen and (min-width: $desktop_lg) {
+        &__content {
+            width: 50%;
         }
     }
 

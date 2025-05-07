@@ -537,3 +537,15 @@ code {
         }
     }
 }
+
+.category-tag {
+    font-family: $heading_font;
+    display: inline-block;
+    font-size: 0.8rem;
+    padding: 0.3rem 0.5rem;
+    padding-top: 0.5rem;
+    color: $cream;
+    background-color: $gray;
+    border: none;
+    text-transform: uppercase;
+}

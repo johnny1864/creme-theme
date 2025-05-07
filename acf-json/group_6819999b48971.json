@@ -160,9 +160,9 @@
     "location": [
         [
             {
-                "param": "post_type",
+                "param": "page_template",
                 "operator": "==",
-                "value": "post"
+                "value": "templates\/contact.php"
             }
         ]
     ],
@@ -175,5 +175,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746508722
+    "modified": 1746554715
 }

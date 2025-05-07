@@ -1,17 +1,21 @@
 .blog {
-    &-posts {
-        display: flex;
-        margin: 0 -1.5rem;
-        flex-wrap: wrap;
-    }
-
-    .post-card {
-        margin: 1.5rem;
-    }
-
-    @media (min-width: $laptop) {
-        .post-card {
-            width: calc(33.33% - 3rem);
+    &-roll-sort {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        border-top: 1px solid rgba($gray, 0.5);
+        &__label {
+            line-height: 1;
+            margin-bottom: 1rem;
         }
+
+        @media screen and (min-width: $laptop) {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 5rem;
+        }
+    }
+
+    &-roll__posts {
+        padding: 0.5rem;
     }
 }

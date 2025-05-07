@@ -1,0 +1,59 @@
+.contact{
+    position: relative;
+    margin: 0 !important;
+    background-position: center top;
+    background-size: cover;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($color: $black, $alpha: 0.30);
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .section__header {
+        padding: 3rem 0;
+        .preheading {
+            color: $red;
+        }
+
+        h1 {
+            color: $cream;
+        }
+
+        @media screen and (min-width: $desktop) {
+            width: 80%;
+        }
+    }
+
+    &__block {
+        padding: 1rem 0 2rem; 
+        border-top: 1px solid rgba($gray, 0.5);
+        color: $cream;
+
+        .h2 {
+            color: $cream;
+        }
+
+        &-left {
+            padding-bottom: 1.5rem;
+            text-transform: uppercase;
+        }
+
+        @media screen and (min-width: $laptop) {
+            display: flex;
+            &-left,
+            &-right {
+                width: 50%;
+            }
+        }
+
+    }
+}

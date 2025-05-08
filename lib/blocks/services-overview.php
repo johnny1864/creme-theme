@@ -21,13 +21,17 @@
                 foreach($section['blocks'] as $index => $block) : 
                 $block = $block['block'];
                 $image = getIMG($block['image']['ID'], 'xl');
+                $block_title = $block['title'];
             ?>
-                <div class="image-content-blocks__block mob-accordion">
+                <div id="image-content-blocks__block-<?php echo $index; ?>" class="image-content-blocks__block mob-accordion">
+                    <p class="image-content-blocks__block-count heading-font desk-only">
+                        (0<?php echo $index + 1; ?>)
+                    </p>
                     <div class="mob-accordion__trigger mob-only">
                         <h5>
-                            <?php echo $block['title']; ?>
+                            <?php echo $block_title; ?>
                         </h5>
-                        <span class="heading-font">
+                        <span class="image-content-blocks__block-count heading-font">
                             (0<?php echo $index + 1; ?>)
                         </span>
                     </div>
@@ -35,9 +39,7 @@
                         <div class="col col--left">
                             <div class="content">
                                 <div class="col__header desk-only">
-                                    <span class="heading-font">
-                                        (0<?php echo $index + 1; ?>)
-                                    </span>
+                                    
                                     <h5>
                                         <?php echo $block['title']; ?>
                                     </h5>
@@ -52,6 +54,18 @@
                                     </ul>
                                 <?php endif; ?>
                             </div>
+
+                            <div class="desk-only image-content-blocks__block-nav">
+                                <?php 
+                                    foreach($section['blocks'] as $index_inner => $block_inner) :
+                                    $block_inner =   $block_inner['block'];
+                                ?>
+                                    <a class="<?php if( $block_inner['title'] == $block['title'] ) : ?>active<?php endif; ?>" href="#image-content-blocks__block-<?php echo $index_inner; ?>">
+                                        <?php echo $block_inner['title'] ?>
+                                    </a>
+                                <?php endforeach; ?>
+                            </div>
+
                         </div>
                         <div class="col col--right">
                             <div class="image-content-blocks__block-image">

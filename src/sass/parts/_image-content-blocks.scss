@@ -17,6 +17,58 @@
         padding: 1.5rem 0;
         border-top: 1px solid rgba($color: $gray, $alpha: 0.50);
 
+        &-count {
+            color: $red;
+            font-size: 1.1rem;
+        }
+
+        
+
+        @media screen and (min-width: $laptop) {
+            padding: 3rem 0;
+            &-count {
+                color: $red;
+                padding-bottom: 2rem;
+            }
+            &-nav {
+                position: absolute;
+                bottom: 0;
+                right: 3rem;
+                a {
+                    color: $gray;
+                    font-family: $heading_font;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    &.active {
+                        color: $red;
+                    }
+                }
+            }
+            .row {
+                display: flex !important;
+                justify-content: space-between;
+                flex-wrap: nowrap;
+                .col {
+                    flex: unset;
+
+                    &--left {
+                        position: relative;
+                        width: 45%;
+                        h5 {
+                            margin-bottom: 1.5rem;
+                        }
+                        .content {
+                            width: 80%;
+                        }
+                    }
+                    
+                    &--right {
+                        width: calc(50% + 3rem);
+                    }
+                }
+            }
+        }
+
         ul {
             list-style: none;
             padding: 3rem 0;
@@ -57,6 +109,8 @@
                 color: $red;
             }
         }
+
+        
 
         @media screen and (max-width: $laptop - 1) {
             .row {

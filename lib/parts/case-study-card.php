@@ -29,7 +29,7 @@
     <div class="case-study-card__content">
         <h4 class="case-study-card__title"><?php the_title(); ?></h4>
         <p class="heading-font text-uppercase">
-            <?php echo get_field('featured_service'); ?>
+            <?php echo $card_settings['featured_service']; ?>
         </p>
         <a class="case-study-card__btn btn" href="<?php echo $permalink; ?>">
             <span class="dot">&#9679;</span> View Project

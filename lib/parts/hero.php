@@ -1,6 +1,6 @@
 <?php
 $hero = $isPTArchive ? get_field('hero', $post_type) : get_field('hero', $post_id);
-if(empty($hero) || $hero['style'] == 'none') return;
+if(empty($hero) || $post_type == "case-study" || $hero['style'] == 'none') return;
 
 $feat_img_id = $isPTArchive ? get_field('feat_img', $post_type)['ID'] : get_post_thumbnail_id($post_id);
 $feat_img = getIMG($feat_img_id, 'xl', true);

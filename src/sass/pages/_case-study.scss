@@ -1,0 +1,21 @@
+.single-case-study {
+    .testimonial {
+        &__card-quote {
+            color: $pink;
+            text-transform: initial;
+            @media screen and (min-width: $desktop) {
+                padding-right: 1em;
+            }
+        }
+
+        &__card-meta {
+            display: block;
+            margin-top: 2rem;
+            
+            span {
+                color: $gray;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

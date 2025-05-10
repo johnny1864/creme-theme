@@ -1,0 +1,30 @@
+.three-col-media {
+&__grid {
+    &-item {
+        &.portrait {
+            aspect-ratio: 3/5;
+        }
+
+        &.square {
+            aspect-ratio: 16/18;
+        }
+
+        img,
+        video{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+    @media screen and (min-width: $laptop) {
+        &__grid {
+            display: flex;
+            justify-content: space-between;
+
+            &-item {
+                width: calc(33% - 0.25rem);
+            }
+        }
+    }
+}

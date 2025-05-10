@@ -182,13 +182,9 @@
                 box-sizing: border-box;
                 position: absolute;
                 right: 100%;
-                color: $info;
+                color: inherit;
                 white-space: nowrap;
             }
-        }
-
-        @media (min-width: $tablet) {
-            margin-left: 1.25rem;
         }
     }
 

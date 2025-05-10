@@ -409,6 +409,88 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_681f95a2ac64a": {
+                    "key": "layout_681f95a2ac64a",
+                    "name": "media_grid",
+                    "label": "Media Grid",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_681f95a2ac64c",
+                            "label": "Items",
+                            "name": "items",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "Input video or Image",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 4,
+                            "collapsed": "",
+                            "button_label": "Add Row",
+                            "rows_per_page": 20,
+                            "sub_fields": [
+                                {
+                                    "key": "field_681f95a2ac64d",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "allow_in_bindings": 0,
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_681f95a2ac64c"
+                                },
+                                {
+                                    "key": "field_681f95a2ac64e",
+                                    "label": "Video",
+                                    "name": "video",
+                                    "aria-label": "",
+                                    "type": "file",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_size": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "allow_in_bindings": 0,
+                                    "parent_repeater": "field_681f95a2ac64c"
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_681ec7be9de2e": {
                     "key": "layout_681ec7be9de2e",
                     "name": "content_block",
@@ -480,6 +562,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "case-study"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "case-study-v2.php"
             }
         ]
     ],
@@ -492,5 +579,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746853501
+    "modified": 1746903013
 }

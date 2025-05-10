@@ -1,0 +1,25 @@
+.case-study-template-case-study-v2 {
+    .section {
+        &__header {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 0.75rem;
+            padding-bottom: 2rem;
+            border-top: 1px solid rgba($color: $gray, $alpha: 0.50);
+
+            @media screen and (min-width: $laptop) {
+                padding-bottom: 4rem;
+            }
+        }
+
+        &__count {
+            font-family: $heading_font;
+            font-size: 1.1rem;
+        }
+
+        &__content {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+    }
+}

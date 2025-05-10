@@ -1,0 +1,17 @@
+.overview {
+    &__content {
+        text-transform: initial;
+    }
+
+    @media screen and (min-width: $laptop) {
+        &__content {
+            width: 75%;
+        }
+    }
+
+    @media screen and (min-width: $desktop_lg){
+        &__content {
+            width: 65%;
+        }
+    }
+}

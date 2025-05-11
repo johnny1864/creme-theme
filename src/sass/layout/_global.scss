@@ -4,7 +4,8 @@
 @import '../includes/lightbox';
 
 
-html, body {
+html,
+body {
     font-size: 16px;
 }
 
@@ -25,7 +26,10 @@ body {
     }
 
     &.blur {
-        header, footer, section {
+
+        header,
+        footer,
+        section {
             filter: blur(4px);
         }
     }
@@ -69,8 +73,8 @@ section,
     }
 
     &:first-child:not(.section-bg),
-    &:not(.section-bg) + .section-bg,
-    &-bg + section:not(.section-bg) {
+    &:not(.section-bg)+.section-bg,
+    &-bg+section:not(.section-bg) {
         margin-top: 2rem;
     }
 
@@ -89,7 +93,7 @@ section,
 
 .section {
     &__header {
-        + .section__content {
+        +.section__content {
             margin-top: 2rem;
         }
     }
@@ -138,13 +142,20 @@ main {
         }
     }
 }
+
 .display-1,
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
     color: $heading_color;
     font-family: $heading_font;
     font-weight: $heading_weight;
@@ -153,7 +164,7 @@ h6, .h6 {
     text-wrap: balance;
     text-transform: uppercase;
 
-    .preheading + & {
+    .preheading+& {
         margin-top: .75rem;
     }
 
@@ -164,18 +175,18 @@ h6, .h6 {
 
 @for $i from 1 through 6 {
 
-    .h#{$i} + h1,
-    h#{$i} + h1,
-    .h#{$i} + h2,
-    h#{$i} + h2,
-    .h#{$i} + h3,
-    h#{$i} + h3,
-    .h#{$i} + h4,
-    h#{$i} + h4,
-    .h#{$i} + h5,
-    h#{$i} + h5,
-    .h#{$i} + h6,
-    h#{$i} + h6 {
+    .h#{$i}+h1,
+    h#{$i}+h1,
+    .h#{$i}+h2,
+    h#{$i}+h2,
+    .h#{$i}+h3,
+    h#{$i}+h3,
+    .h#{$i}+h4,
+    h#{$i}+h4,
+    .h#{$i}+h5,
+    h#{$i}+h5,
+    .h#{$i}+h6,
+    h#{$i}+h6 {
         margin-top: .75rem;
     }
 }
@@ -188,7 +199,8 @@ h6, .h6 {
     }
 }
 
-h1, .h1 {
+h1,
+.h1 {
     font-size: $heading_h1__mobile;
 
     @media (min-width: $laptop) {
@@ -201,7 +213,8 @@ h1, .h1 {
 
 }
 
-h2, .h2 {
+h2,
+.h2 {
     font-size: $heading_h2__mobile;
 
     @media (min-width: $laptop) {
@@ -209,7 +222,8 @@ h2, .h2 {
     }
 }
 
-h3, .h3 {
+h3,
+.h3 {
     font-size: $heading_h3__mobile;
 
     @media (min-width: $laptop) {
@@ -217,7 +231,8 @@ h3, .h3 {
     }
 }
 
-h4, .h4 {
+h4,
+.h4 {
     font-size: $heading_h4__mobile;
 
     @media (min-width: $laptop) {
@@ -225,7 +240,8 @@ h4, .h4 {
     }
 }
 
-h5, .h5 {
+h5,
+.h5 {
     font-size: $heading_h5__mobile;
 
     @media (min-width: $laptop) {
@@ -233,7 +249,8 @@ h5, .h5 {
     }
 }
 
-h6, .h6 {
+h6,
+.h6 {
     font-size: $heading_h6__mobile;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -316,6 +333,7 @@ button {
     &--secondary {
         background-color: $purple;
         color: $cream;
+
         &:hover {
             background: $cream;
             color: $purple;
@@ -352,7 +370,7 @@ button {
             background: transparent;
         }
 
-        .btn + & {
+        .btn+& {
             margin-top: 1.25rem;
         }
 
@@ -373,7 +391,7 @@ button {
 
     @media (min-width: $mobile) {
         &--text {
-            .btn + & {
+            .btn+& {
                 margin-top: .75rem;
                 margin-left: .5rem;
             }
@@ -395,7 +413,10 @@ button {
     aspect-ratio: 16/9;
     background: $black;
 
-    &__cover, &__embed, iframe, video {
+    &__cover,
+    &__embed,
+    iframe,
+    video {
         position: absolute;
         top: 0;
         bottom: 0;
@@ -446,7 +467,7 @@ button {
     li {
         margin: 0;
 
-        + li {
+        +li {
             margin-left: 1rem;
         }
     }
@@ -486,11 +507,14 @@ code {
     display: inline-block;
     vertical-align: middle;
 
-    svg, img, a {
+    svg,
+    img,
+    a {
         display: block;
     }
 
-    svg, img {
+    svg,
+    img {
         max-width: 100%;
     }
 }
@@ -504,8 +528,8 @@ code {
     justify-content: center;
     align-items: center;
 
-    > span,
-    > a {
+    >span,
+    >a {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -553,4 +577,39 @@ code {
     background-color: $gray;
     border: none;
     text-transform: uppercase;
+}
+
+.media {
+    
+
+    &__grid {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &-wrap {
+        margin-bottom: 0.8rem;
+        &.one-third {
+            width: calc(33% - 0.4rem);
+            aspect-ratio: 3/4;
+        }
+
+        &.one-half {
+            width: calc(50% - 0.4rem);
+            aspect-ratio: 10/9;
+        }
+
+        &.full-width {
+            width: 100%;
+            aspect-ratio: 2/1;
+        }
+
+        img,
+        video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
 }

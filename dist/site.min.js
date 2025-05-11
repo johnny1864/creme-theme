@@ -660,6 +660,43 @@ jQuery(document).ready(function ($) {
 
     }());
 
+    var Counters = (function() {
+        var $counters = $('.strategy__counters');
+        if (!$counters.length) { return; }
+
+        $counters = document.querySelector('.strategy__counters');
+
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    countAnimation()
+                }
+            });
+        },{
+            threshold: 0.0
+        });
+
+        observer.observe($counters);
+        
+        function countAnimation() {
+            $('.count').each(function () {
+                console.log($(this).text());
+                $(this).prop('Counter',0).animate({
+                    Counter: $(this).text()
+                }, {
+                    duration: 3000,
+                    easing: 'swing',
+                    step: function (now) {
+                        $(this).text(Math.ceil(now));
+                    }
+                });
+            });
+
+            observer.unobserve($counters)
+        }
+    }());
+
     var LoadMore = (function () {
 
         var $loadmore = $('#loadmore');

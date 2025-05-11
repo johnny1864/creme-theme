@@ -21,7 +21,7 @@
         </div>
   
         <?php if(!empty($content)): ?>
-            <div class="section__content"><?php echo $content; ?></div>
+            <div class="section__content section__block"><?php echo $content; ?></div>
         <?php endif; ?>
        
     </div>

@@ -19,6 +19,8 @@ if (strpos($_SERVER['REQUEST_URI'], 'styleguide') !== false) {
 	$typeOrID = get_option('page_for_posts');
 }
 
+$section_counter = 1;
+
 if (have_rows('blocks', $typeOrID)) {
 	while (have_rows('blocks', $typeOrID)) {
 		the_row();
@@ -27,7 +29,7 @@ if (have_rows('blocks', $typeOrID)) {
 		$modifiers = get_sub_field('modifiers');
 		$section_attrs = array();
 		$section_attrs['style'] = array();
-        $section_counter = 1;
+        
 
 		$classList = array(str_replace('_', '-', $layout));
 

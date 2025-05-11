@@ -18,4 +18,23 @@
             }
         }
     }
+
+    .strategy__counters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .counter__block {
+            width: 50%;  
+            .count {
+                line-height: 0.8;
+            }
+        }
+
+        @media screen and (min-width: $laptop) {
+            .counter__block {
+                width: auto;
+            }
+        }
+    }
 }

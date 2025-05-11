@@ -1,0 +1,26 @@
+.conclusion {
+    &-case-studies {
+        &__headline {
+            margin-bottom: 3rem;
+            text-align: center;
+
+            h2 {
+                margin-bottom: 0.5em;
+            }
+            
+            @media screen and (min-width: $desktop) {
+                margin-bottom: 5rem;
+                h2 {
+                    display: flex;
+                    justify-content: space-around;
+                }
+            }
+
+            a {
+                color: $red;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        }
+    }
+}

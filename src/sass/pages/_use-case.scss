@@ -10,16 +10,32 @@
             @media screen and (min-width: $laptop) {
                 padding-bottom: 4rem;
             }
+
+            @media screen and (min-width: $desktop) {
+                padding-bottom: 5rem;
+            }
         }
 
         &__count {
             font-family: $heading_font;
             font-size: 1.1rem;
+            color: $red;
         }
 
         &__content {
-            max-width: 750px;
+            max-width: 725px;
             margin: 0 auto;
+            line-height: 1.1;
+            @media screen and (min-width: $laptop) {
+                font-size: 1.2rem;
+            }
+        }
+
+        &__block {
+            margin-bottom: 3rem;
+            @media screen and (min-width: $desktop) {
+                margin-bottom: 5rem;
+            }
         }
     }
 }

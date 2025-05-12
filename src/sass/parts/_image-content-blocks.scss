@@ -28,6 +28,7 @@
             color: $red;
             text-transform: uppercase;
             text-decoration: none;
+            font-size: 0.9rem;
         }
 
         
@@ -54,6 +55,7 @@
                 a {
                     color: $gray;
                     font-family: $heading_font;
+                    font-size: 0.75rem;
                     text-transform: uppercase;
                     text-decoration: none;
                     &.active {
@@ -70,7 +72,10 @@
 
                     &--left {
                         position: relative;
+                        display: flex;
+                        flex-direction: column;
                         width: 45%;
+
                         h5 {
                             margin-bottom: 1.5rem;
                         }

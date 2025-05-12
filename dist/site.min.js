@@ -656,6 +656,39 @@ jQuery(document).ready(function ($) {
     }
   })();
 
+  var HeroImageFullWidth = (function () {
+    const trigger = $(".hero--full-image");
+    const target = $(".hero--full-image .hero__image-wrapper img");
+    
+    if (!trigger.length) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    console.log(window.matchMedia("(min-width: 960px)").matches);
+    if( window.matchMedia("(min-width: 960px)").matches ) {
+        let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: trigger,
+            // trigger element - viewport
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+        },
+        });
+
+        tl.fromTo(
+        target,
+        {
+            width: "10rem",
+        },
+        {
+            width: "100%",
+            duration: 1,
+        
+        }
+        );
+    }
+  })();
+
   var TextScrollAnimation = function () {
     const words = document.querySelectorAll(".featured-text__text span");
 

@@ -159,8 +159,8 @@
         $word_count = str_word_count( strip_tags( $content ) );
         $readingtime = ceil($word_count / 250);
 
-		$timer = "min read";
-		$totalreadingtime = $readingtime . $timer;
+		$timer = "minutes";
+		$totalreadingtime = $readingtime . " " . $timer;
 
         if( $readingtime != 0 ){
             return $totalreadingtime;

@@ -38,6 +38,29 @@
         }
     }
 
+    &--full-image {
+
+        h1 {
+            margin-bottom: 1em;
+        }
+
+        .hero__image-wrapper {
+            display: flex;
+            justify-content: center;
+            aspect-ratio: 16/9;
+            @media screen and (max-width: $mobile ) {
+                width: calc(100% + 2rem);
+                transform: translateX(-1rem);
+                aspect-ratio: 1/1;
+            }
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
     &--service {
         @media screen and (min-width: $laptop) {
             .hero__title {

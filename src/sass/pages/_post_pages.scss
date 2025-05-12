@@ -17,14 +17,16 @@
         &-meta {
             display: flex;
             justify-content: center;
-            
+
             &-block {
                 font-family: $heading_font;
                 text-transform: uppercase;
                 padding: 1.5rem;
+
                 p {
                     color: $gray;
                 }
+
                 span {
                     color: $purple;
                 }
@@ -33,8 +35,17 @@
 
         &-content {
             padding-bottom: 2rem;
+
+            .post-categories {
+                margin-bottom: 1.5rem;
+            }
+
             @media screen and (min-width: $laptop) {
                 padding-bottom: 5rem;
+
+                .post-categories {
+                    margin-bottom: 4rem;
+                }
             }
         }
 
@@ -47,6 +58,27 @@
     &__content {
         .container {
             max-width: 800px;
+        }
+
+        h2,
+        .h2,
+        h3,
+        .h3,
+        h4,
+        .h4,
+        h5,
+        .h5,
+        h6,
+        .h6 {
+            margin-top: 1.5rem;
+        }
+
+        p {
+            color: #333333;
+        }
+
+        a {
+            color: $purple;
         }
     }
 }

@@ -6,6 +6,16 @@ if (!empty(get_post_thumbnail_id())) {
     $thumbnail_id = get_post_thumbnail_id();
     $feat_img = getIMG($thumbnail_id, 'xl', false);
 }
+
+$categories = get_the_category();
+$categories_tags = ! empty( $categories ) ? array_slice( $categories, 0, 3 ) : array();
+$data_cat = [];
+
+foreach ( $categories as $cat ) {
+    $single_cat = strtolower( str_replace( ' ', '-', $cat->name ) );
+    array_push( $data_cat, $single_cat );
+}
+
 ?>
 
 
@@ -19,6 +29,17 @@ if (!empty(get_post_thumbnail_id())) {
         </div>
 
         <div class="single-post__hero-content text-center">
+            <?php
+            if ( ! empty( $categories_tags ) ) :
+                ?>
+                <div class="post-categories">
+                    <?php foreach ( $categories_tags as $cat ) : ?>
+                        <span
+                            class="category-tag"
+                        ><?php echo $cat->name; ?></span>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
             <h1>
                 <?php echo get_the_title($post_id); ?>
             </h1>

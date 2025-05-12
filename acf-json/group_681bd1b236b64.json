@@ -226,7 +226,7 @@
                                         "class": "",
                                         "id": ""
                                     },
-                                    "return_format": "url",
+                                    "return_format": "array",
                                     "allow_in_bindings": 0
                                 }
                             ],
@@ -255,5 +255,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746655330
+    "modified": 1747081186
 }

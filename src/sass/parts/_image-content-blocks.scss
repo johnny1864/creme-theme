@@ -22,6 +22,14 @@
             font-size: 1.1rem;
         }
 
+        &-link {
+            display: inline-block;
+            font-family: $heading_font;
+            color: $red;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
         
 
         @media screen and (min-width: $laptop) {
@@ -30,10 +38,19 @@
                 color: $red;
                 padding-bottom: 2rem;
             }
+
+            &-link{
+                margin-top: auto;
+            }
+
             &-nav {
                 position: absolute;
                 bottom: 0;
                 right: 3rem;
+                display: flex;
+                flex-direction: column;
+                text-align: right;
+
                 a {
                     color: $gray;
                     font-family: $heading_font;
@@ -63,7 +80,7 @@
                     }
                     
                     &--right {
-                        width: calc(50% + 3rem);
+                        width: calc(50% + 2rem);
                     }
                 }
             }

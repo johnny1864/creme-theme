@@ -14,6 +14,13 @@
             font-size: 1.25rem;
             padding: 1rem 0 1.5rem;
             text-align: right;
+            letter-spacing: 1px;
+
+            @media screen and (min-width: $laptop) {
+                position: absolute;
+                right: 0;
+                bottom: 8rem;
+            }
         }
         
 
@@ -44,7 +51,9 @@
             transition: all 200ms ease;
 
             @media screen and (min-width: $laptop) {
-                padding-right: 3rem;
+                padding: 1.5rem 0;
+                padding-right: 6rem;
+
             }
 
             &.active {
@@ -60,13 +69,22 @@
     &__card {
 
         @media screen and (min-width: $laptop) {
-            padding-right: 2.5rem;
+            padding-right: 3rem;
+        }
+
+        @media screen and (min-width: $desktop_lg)  {
+            width: 75%;
+            padding-right: 0;
         }
 
         &-meta {
             display: flex;
             align-items: center;
             padding-top: 1.5rem;
+
+            @media screen and (min-width: $desktop_lg) {
+                padding-top: 4rem;
+            }
         }
 
         &-author {

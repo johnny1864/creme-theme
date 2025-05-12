@@ -10,6 +10,21 @@
             transition: all ease 200ms;
         }
 
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+            &.hover-image {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        
+
         @media screen and (min-width: $laptop) {
             aspect-ratio: 386 / 589;
 
@@ -19,11 +34,15 @@
 
             img {
                 transition: all ease 200ms;
+                &.hover-image {
+                    display: block;
+                }
             }
 
             &:hover {
-                img {
-                    filter: grayscale(1);
+                .hover-image {
+                    opacity: 0;
+                    pointer-events: none;
                 }
                 .btn {
                     opacity: 1;
@@ -37,9 +56,20 @@
     }
 
     &__title {
+        font-family: $heading_font;
         font-size: 1.1rem;
         text-transform: uppercase;
-    }
-
+    }  
     
+    &__position {
+        color: $gray;
+        font-family: $heading_font;
+        text-transform: uppercase;
+    }
+}
+
+.team-modal {
+    &__bio {
+        margin-top: 1.5rem;
+    }
 }

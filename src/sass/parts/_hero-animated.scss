@@ -1,14 +1,41 @@
 .hero--animated {
+
+    .container {
+        position: relative;
+    }
+
     .hero__title {
         position: relative;
         z-index: 2;
         span {
             display: block;
         }
+
+        @media screen and (min-width: $laptop) {
+            margin-bottom: 2em;
+        }
     }
 
     .hero__image-wrapper {
-        @media screen and (max-width: $laptop) {
+        position: relative;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @media screen and (min-width: $laptop) {
+            position: absolute;
+            display: flex;
+            justify-content: flex-end;
+            right: 0;
+            top: 190px;
+            height: 700px;
+            width: 45%;
+        }
+
+        @media screen and (max-width: $laptop - 1px) {
             width: 80%;
             margin-left: auto;
             transform: translateY(-1.5rem);
@@ -21,7 +48,7 @@
         }
 
         @media screen and (min-width: $laptop) {
-            width: 60%;
+            width: 55%;
             p {
                 width: 70%;
             }

@@ -22,24 +22,26 @@
                 <div class="swiper-wrapper">
                     <?php foreach ( $testimonials as $post ) : ?>
                         <?php setup_postdata($post); ?>
-                        <div class="testimonials__card swiper-slide">
-                            <?php if ( ! empty( get_field('quote') ) ) : ?>
-                                <div class="testimonial__card-quote h4">
-                                    <?php echo get_field('quote'); ?>
-                                </div>
-                            <?php endif; ?>
-                            <div class="testimonials__card-meta">
-                                <?php if ( ! empty( get_field('author_icon') ) ) : ?>
-                                    <span class="testimonials__card-author-icon">
-                                        <div class="positioner">
-                                        <?php echo getIMG(get_field('author_icon'), 'sm'); ?>
-                                        </div> 
-                                    </span>
+                        <div class="swiper-slide">
+                            <div class="testimonials__card">
+                                <?php if ( ! empty( get_field('quote') ) ) : ?>
+                                    <div class="testimonial__card-quote h4">
+                                        <?php echo get_field('quote'); ?>
+                                    </div>
                                 <?php endif; ?>
-                                
-                                <span class="testimonials__card-author heading-font">
-                                    <?php echo get_the_title(); ?>
-                                </span>   
+                                <div class="testimonials__card-meta">
+                                    <?php if ( ! empty( get_field('author_icon') ) ) : ?>
+                                        <span class="testimonials__card-author-icon">
+                                            <div class="positioner">
+                                            <?php echo getIMG(get_field('author_icon'), 'sm'); ?>
+                                            </div> 
+                                        </span>
+                                    <?php endif; ?>
+                                    
+                                    <span class="testimonials__card-author heading-font">
+                                        <?php echo get_the_title(); ?>
+                                    </span>   
+                                </div>
                             </div>
                         </div>
                     <?php endforeach; wp_reset_postdata(); ?>

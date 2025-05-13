@@ -151,6 +151,28 @@
                             "prepend": "",
                             "append": "",
                             "parent_repeater": "field_68199a6eeadf3"
+                        },
+                        {
+                            "key": "field_6823b54c52fd5",
+                            "label": "Form shortcode",
+                            "name": "form_shortcode",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "allow_in_bindings": 0,
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_68199a6eeadf3"
                         }
                     ]
                 }
@@ -175,5 +197,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746554715
+    "modified": 1747170906
 }

@@ -89,6 +89,64 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6823a002d3ff9": {
+                    "key": "layout_6823a002d3ff9",
+                    "name": "animated_image",
+                    "label": "Animated Full Width Image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6823a002d3ffb",
+                            "label": "Modifiers",
+                            "name": "modifiers",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "field_611ac89ecbc38"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        },
+                        {
+                            "key": "field_6823a026d3ffe",
+                            "label": "Image",
+                            "name": "image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_6817dab585ca6": {
                     "key": "layout_6817dab585ca6",
                     "name": "cta_text",
@@ -1158,5 +1216,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747161353
+    "modified": 1747165237
 }

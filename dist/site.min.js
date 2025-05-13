@@ -627,7 +627,7 @@ jQuery(document).ready(function ($) {
     if (!trigger.length) return;
 
     gsap.registerPlugin(ScrollTrigger);
-    console.log(window.matchMedia("(min-width: 960px)").matches);
+
     if( window.matchMedia("(min-width: 960px)").matches ) {
         let tl = gsap.timeline({
         scrollTrigger: {
@@ -684,6 +684,41 @@ jQuery(document).ready(function ($) {
             width: "100%",
             duration: 1,
         
+        }
+        );
+    }
+  })();
+
+  var SectionImageFullWidth = (function () {
+    const trigger = $(".job-posts");
+    const target = $(".animated-image img");
+    
+    if (!trigger.length) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+    // console.log(window.matchMedia("(min-width: 960px)").matches);
+    if( window.matchMedia("(min-width: 960px)").matches ) {
+        let tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: trigger,
+            // trigger element - viewport
+            start: "top top",
+            end: "bottom bottom",
+            scrub: 1,
+            pin: true,
+            markers: true
+        },
+        });
+
+        tl.fromTo(
+        target,
+        {
+            width: "10rem",
+        },
+        {
+            width: "100%",
+            duration: 4,
+            ease: "none"
         }
         );
     }

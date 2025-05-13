@@ -55,5 +55,93 @@
             }
         }
 
+        @media screen and (min-width: $desktop_lg) {
+            &-right {
+                width: calc(50% - 3rem);
+                margin-left: auto;
+            }
+        }
+
+        .gform_wrapper {
+            form {
+                margin-top: 0;
+                background-color: $cream;
+                padding: 1rem;
+
+                @media screen and (min-width: $desktop) {
+                    padding: 2.5rem 1.5rem;
+                }
+
+                 .gfield_price, .gfield_label {
+                    font-family: $heading_font;
+                    color: $purple;
+                    text-transform: uppercase;
+                    font-size: 0.75rem;
+                    font-weight: normal;
+                }
+
+                .ginput_container_checkbox {
+                    margin-top: 1rem;
+                }
+
+                .gfield_description {
+                    font-style: normal;
+                }
+
+                .gfield_checkbox {
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+
+                    .gchoice {
+                        position: relative;
+                        margin-right: 5px;
+                        margin-bottom: 5px;
+                        font-family: $heading_font;
+                        text-transform: uppercase;
+
+                        input {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            opacity: 0;
+                        }
+
+                        label {
+                            display: inline-block;
+                            padding: 0.45rem 0.5rem 0.25rem;
+                            background-color: $gray;
+                            color: $cream;
+                            font-size: 0.8rem;
+                            cursor: pointer;
+                        }
+
+                        input:checked + label {
+                            background-color: $purple;
+                        }
+                    }
+                }
+
+                [type="text"], [type="email"], [type="password"], [type="tel"], [type="file"], [type="search"], [type="number"], [type="url"], [type="reset"], textarea, select, .gform_previous_button, .gform_next_button, .select-menu, .search-input {
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid $purple;
+                    padding-left: 0;
+                    font-size: 0.8rem;
+                    color: $purple;
+
+                    &::placeholder {
+                        font-family: $heading_font;
+                        color: $purple;
+                        text-transform: uppercase;
+                    }
+                }
+
+                [type="submit"] {
+                    width: 100%;
+                }
+            }
+        }
+
     }
 }

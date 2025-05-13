@@ -181,16 +181,8 @@
         if ($load) exit(); // just exit if template was found and loaded
     });
 
-    function enqueue_custom_slipt_text_script() {
-        wp_enqueue_script(
-            'custom-split-text', // handle
-            get_template_directory_uri() . '/gsap/LottieSplitText.js', // path to your JS file
-            array(), // dependencies, e.g., array('jquery') if needed
-            null, // version number
-            true // load in footer
-        );
-    }
-    // add_action('wp_enqueue_scripts', 'enqueue_custom_slipt_text_script');
+    
+
 
     function enqueue_custom_gsap_script() {
         wp_enqueue_script(
@@ -201,4 +193,4 @@
             true // load in footer
         );
     }
-    add_action('wp_enqueue_scripts', 'enqueue_custom_gsap_script');
+    // add_action('wp_enqueue_scripts', 'enqueue_custom_gsap_script');

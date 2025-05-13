@@ -30,8 +30,14 @@
                 <div class="contact__block-left heading-font">
                     <?php echo $block['label']; ?>
                 </div>
-                <div class="h2 contact__block-right">
-                    <?php echo $block['text']; ?>
+                <div class="contact__block-right">
+                    <div class="h2">
+                        <?php echo $block['text']; ?>
+                    </div>
+                    
+                    <?php if(!empty($block['form_shortcode'])) {
+                        echo do_shortcode( $block['form_shortcode'] );
+                    } ?>
                 </div>
               </div>
               <?php endforeach; ?>

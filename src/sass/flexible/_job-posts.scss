@@ -1,0 +1,43 @@
+.counters {
+    &.job-posts {
+
+        .counters__block-subtext {
+            margin-top: 0;
+        } 
+
+        @media screen and (min-width: $laptop) {
+            .counters__block-wrapper {
+                position: relative;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+
+                h3 {
+                    max-width: 500px;
+                    padding: 0 1em;
+                }
+            }
+
+            .job-posts__block-content {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 70%;
+            }
+
+            .counters__block-cta-text {
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+
+        @media screen and (max-width: $tablet) {
+            .counters__block-cta {
+                padding-top: 1rem;
+            }
+        }
+    }
+}

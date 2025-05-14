@@ -9,6 +9,9 @@
     }
 
     &__content {
+        a {
+            color: $purple;
+        }
         @media screen and (min-width: $desktop) {
             position: relative;
            
@@ -23,5 +26,9 @@
                 right: 0;
             }
         }
+    }
+
+    .section__cta {
+        margin-top: 1.5rem;
     }
 }

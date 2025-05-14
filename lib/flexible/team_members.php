@@ -1,6 +1,7 @@
 <?php
 	$heading = get_sub_field('heading');
     $team = get_sub_field('members');
+    $heading2 = get_sub_field('second_heading');
 
 	$attr = buildAttr(array('id'=>$id,'class'=>$classList));
 ?>
@@ -10,6 +11,7 @@
         <?php if(!empty($heading)): ?>
         <div class="section__header">
             <h2 class="display-1"><?php echo $heading; ?></h2>
+             <h2 class="display-1 second-heading"><?php echo $heading2; ?></h2>
         </div>
         <?php endif; ?>
         

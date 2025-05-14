@@ -5,6 +5,14 @@
 
         @media screen and (min-width: $laptop) {
             padding-bottom: 5rem;
+            text-align: center;
+        }
+
+        @media screen and (min-width: $desktop_lg) {
+            .second-heading {
+                display: flex;
+                justify-content: space-between;
+            }
         }
 
         .display-1{

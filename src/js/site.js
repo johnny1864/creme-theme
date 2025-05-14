@@ -878,6 +878,39 @@ jQuery(document).ready(function ($) {
     }
   })();
 
+  var BlogFilter = (function(){
+
+    const blogRoll = $('.blog-roll');
+    const filterBtn = blogRoll.find('.categories-filter .category-tag');
+    const blogPosts = blogRoll.find('.post-card');
+    const blogPostsItems = blogRoll.find('.blog-post-item')
+
+    if(!blogRoll.length) return;
+
+    console.log(blogPosts);
+    filterBtn.click(function() {
+      filterBtn.removeClass('active');
+      $(this).addClass('active');
+
+      const category = $(this).data('cat');
+      blogPostsItems.fadeIn();
+      if(category == "all") {
+        return
+      }
+
+      console.log('btn click ' + category);
+
+      blogPosts.each((index, post )=> {
+        const postCategories = $(post).data('categories');
+        console.log(postCategories.includes(category))
+        if(!postCategories.includes(category)){
+          $(post).closest('.blog-post-item').fadeOut();
+        }
+      })
+    });
+
+  }());
+
   var LoadMore = (function () {
     var $loadmore = $("#loadmore");
 

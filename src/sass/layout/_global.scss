@@ -577,6 +577,11 @@ code {
     background-color: $gray;
     border: none;
     text-transform: uppercase;
+    transition: all ease 200ms;
+
+    &.active {
+        background-color: $purple;
+    }
 }
 
 .media {

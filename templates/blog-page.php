@@ -15,9 +15,9 @@ $headline = get_field( 'headline' ) ? get_field( 'headline' ) : get_the_title();
         <div class="blog-roll-sort">
             <p class="blog-roll-sort__label heading-font">CATEGORIES</p>
 
-            <div class="categories-filter">
+            <div class="categories-filter ">
             <button data-cat="all"
-            class="category-tag">All Categories</button>
+            class="category-tag active">All Categories</button>
                 <?php
                 $categories = get_categories();
                 if ( ! empty( $categories ) ) :

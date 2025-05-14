@@ -1,0 +1,13 @@
+.archive-case-study {
+    .hero {
+        .container {
+            @media screen and (min-width: $desktop_lg) {
+                max-width: 1400px;
+            }
+        }
+    }
+
+    .case-study-card {
+        margin-bottom: 0.75rem;
+    }
+}

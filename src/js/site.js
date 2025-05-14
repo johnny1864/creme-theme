@@ -705,8 +705,7 @@ jQuery(document).ready(function ($) {
               start: "top top",
               end: "bottom bottom",
               scrub: 1,
-              pin: true,
-              markers: true
+              pin: true
           },
         });
 

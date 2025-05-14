@@ -35,7 +35,7 @@
 
             <?php if(!empty($cta)):?>     
                 <a
-                    class="btn"
+                    class="btn btn--secondary"
                     href="<?php echo esc_url( $cta['url'] ); ?>"
                     target="<?php echo esc_attr( $cta['target'] ); ?>"
                 >

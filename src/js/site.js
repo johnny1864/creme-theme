@@ -699,27 +699,27 @@ jQuery(document).ready(function ($) {
     // console.log(window.matchMedia("(min-width: 960px)").matches);
     if( window.matchMedia("(min-width: 960px)").matches ) {
         let tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: trigger,
-            // trigger element - viewport
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
-            pin: true,
-            markers: true
-        },
+          scrollTrigger: {
+              trigger: trigger,
+              // trigger element - viewport
+              start: "top top",
+              end: "bottom bottom",
+              scrub: 1,
+              pin: true,
+              markers: true
+          },
         });
 
         tl.fromTo(
         target,
-        {
-            width: "10rem",
-        },
-        {
-            width: "100%",
-            duration: 4,
-            ease: "none"
-        }
+          {
+              width: "10rem",
+          },
+          {
+              width: "100%",
+              duration: 4,
+              ease: "none"
+          }
         );
     }
   })();

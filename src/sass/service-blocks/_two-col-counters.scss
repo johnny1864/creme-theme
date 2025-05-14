@@ -20,6 +20,7 @@
 
         @media screen and (min-width: $laptop) {
             padding: 1.5rem 0;
+            width: 45%;
             &-title {
                 flex-direction: row;
 
@@ -43,6 +44,7 @@
         @media screen and (min-width: $laptop) {
             display: flex;
             justify-content: space-around;
+            flex-wrap: wrap;
             &-col {
                 width: 45%;
             }

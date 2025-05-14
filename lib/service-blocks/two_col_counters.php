@@ -17,10 +17,10 @@
     <?php endif; ?>
     <div class="two-col-counters__grid">
     <?php $half = ceil( count($counters) / 2 ); ?>
-        <div class="two-col-counters__grid-col">
+        
             <?php 
                 foreach($counters as $index => $block) : 
-                if($index < $half) :
+                //if($index < $half) :
             ?>
                 <div class="two-col-counters__block">
                     <div class="two-col-counters__block-wrapper">
@@ -40,9 +40,12 @@
                         </div>
                     </div>
                 </div>
-            <?php endif; endforeach; ?>
-        </div>
-        <div class="two-col-counters__grid-col">
+            <?php 
+            // endif; 
+             endforeach; 
+             ?>
+       
+        <!-- <div class="two-col-counters__grid-col">
             <?php 
                 foreach($counters as $index => $block) : 
                 if($index >= $half) :
@@ -66,7 +69,7 @@
                     </div>
                 </div>
             <?php endif; endforeach; ?>
-        </div>
+        </div> -->
     </div>
 
 </section>

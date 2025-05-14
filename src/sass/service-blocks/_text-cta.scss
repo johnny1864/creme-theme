@@ -12,6 +12,11 @@
         h3 {
             text-transform: initial;
         }
+
+        .btn {
+            margin-top: 1.5rem;
+        }
+        
         @media screen and (min-width: $desktop) {
             position: relative;
            

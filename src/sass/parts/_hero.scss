@@ -16,12 +16,28 @@
         margin-top: 2rem;
     }
 
+    &__gif {
+        display: none;
+        width: 200px;
+
+        @media screen and (min-width: $laptop) {
+            display: block;
+            position: absolute;
+            bottom: -2rem;
+            right: 0;
+        }
+    }
+
     &--basic {
         .hero__content {
             max-width: 350px;
             color: $red;
             margin: 0 auto;
             padding-top: 3rem;
+        }
+
+        .container {
+            position: relative;
         }
 
         @media screen and (min-width: $laptop) {

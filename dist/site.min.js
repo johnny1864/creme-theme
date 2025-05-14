@@ -690,7 +690,7 @@ jQuery(document).ready(function ($) {
   })();
 
   var SectionImageFullWidth = (function () {
-    const trigger = $(".job-posts");
+    const trigger = $(".animated-image");
     const target = $(".animated-image img");
     
     if (!trigger.length) return;

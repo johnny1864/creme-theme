@@ -9,14 +9,14 @@
     }
 
     &__content {
-        a {
-            color: $purple;
+        h3 {
+            text-transform: initial;
         }
         @media screen and (min-width: $desktop) {
             position: relative;
            
             h3 {
-                width: 90%;
+                width: 80%;
                 text-transform: unset;
             }
 
@@ -26,9 +26,5 @@
                 right: 0;
             }
         }
-    }
-
-    .section__cta {
-        margin-top: 1.5rem;
     }
 }

@@ -29,6 +29,9 @@
             max-width: 350px;
             margin: 0 auto;
             padding-top: 3rem;
+            a {
+                color: $purple;
+            }
         }
 
         &__cta {

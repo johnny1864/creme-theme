@@ -2,9 +2,9 @@
 
     .gheader {
 
-        &.sticky--scrolled {
+        &:not(.sticky--scrolled) {
             svg path {
-                fill: $purple;
+                fill: $cream;
             }
         }
 

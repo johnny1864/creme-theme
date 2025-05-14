@@ -1,3 +1,22 @@
+.template-contact {
+    .gheader {
+
+        &:not(.sticky--scrolled) {
+            svg path {
+                fill: $cream;
+            }
+        }
+
+        @media screen and (min-width: $laptop) {
+            &:not(.sticky--scrolled) {
+                .menu-item__link {
+                    color: $cream;
+                }
+            }
+        }
+    }
+}
+
 .contact{
     position: relative;
     margin: 0 !important;

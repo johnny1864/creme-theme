@@ -911,6 +911,38 @@ jQuery(document).ready(function ($) {
 
   }());
 
+  var CaseStudyFilter = (function(){
+
+    const blogRoll = $('.archive-case-study .blog-posts');
+    const filterBtn = $('.categories-filter .category-tag');
+    const blogPosts = blogRoll.find('.case-study-card');
+
+    if(!blogRoll.length) return;
+
+    console.log(blogPosts);
+    filterBtn.click(function() {
+      filterBtn.removeClass('active');
+      $(this).addClass('active');
+      console.log('click');
+      const category = $(this).data('cat');
+      blogPosts.fadeIn();
+      if(category == "all") {
+        return
+      }
+
+      console.log('btn click ' + category);
+
+      blogPosts.each((index, post )=> {
+        const postCategories = $(post).data('categories');
+        console.log(postCategories.includes(category))
+        if(!postCategories.includes(category)){
+          $(post).fadeOut();
+        }
+      })
+    });
+
+  }());
+
   var LoadMore = (function () {
     var $loadmore = $("#loadmore");
 

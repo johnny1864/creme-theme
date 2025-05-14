@@ -12,10 +12,23 @@
         $mobile_image = getIMG($mobile_imageID, 'lg', false, array('class' => 'mob-only'));
     }
     
+    $services = [];
+
+    $hero = get_field('hero');
+
+    if(!empty($hero['services'])) { 
+        foreach($hero['services'] as $service) { 
+            $serviceTitle = get_the_title($service->ID);
+            $single_service = strtolower( str_replace( ' ', '-', $serviceTitle ) );
+            array_push( $services, $single_service );
+        }
+    }
     
 ?>
 
-<article class="case-study-card hover-wrapper <?php if($card_settings['text_white']) : ?>case-study-card--white<?php endif; ?>">
+<article 
+    data-categories="<?php echo implode( " ", $services ); ?>"
+    class="case-study-card hover-wrapper <?php if($card_settings['text_white']) : ?>case-study-card--white<?php endif; ?>">
     <a class="case-study-card__thumb" href="<?php echo $permalink; ?>">
         <div class="positioner">
             <?php 

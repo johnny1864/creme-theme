@@ -4,6 +4,13 @@
         &-item {
             aspect-ratio: 5/4;
 
+            @media screen and (max-width: $tablet) {
+                margin-bottom: 0.75rem;
+                &.empty {
+                    display: none;
+                }
+            }
+
             video,
             img {
                 height: 100%;

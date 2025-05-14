@@ -9,7 +9,7 @@
     <div class="container">
         <div class="three-col-media__grid">
             <?php foreach($columns as $column) : ?>
-                <div class="three-col-media__grid-item <?php echo get_sub_field('aspect_ratio'); ?>">
+                <div class="three-col-media__grid-item <?php if( empty($column['image']) && empty($column['video']) ) : ?> empty <?php endif; ?> <?php echo get_sub_field('aspect_ratio'); ?>">
                     <?php if($column['image']) : ?>
                         <?php echo getIMG($column['image']['ID']) ?>
                     <?php elseif($column['video']) : ?>

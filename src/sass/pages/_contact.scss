@@ -89,6 +89,10 @@
 
                 @media screen and (min-width: $desktop) {
                     padding: 2.5rem 1.5rem;
+
+                    .gfield {
+                        margin-bottom: 1rem;
+                    }
                 }
 
                  .gfield_price, .gfield_label {

@@ -594,6 +594,24 @@ jQuery(document).ready(function ($) {
     });
   })();
 
+  var BasicHero = (function () {
+    var hero = $(".hero--basic");
+    var preheading = hero.find('.preheading')
+  
+    if (!preheading.length) {
+      return;
+    }
+
+    console.log('hero basic');
+    $(window).on("scroll", function () {
+      if (window.innerWidth > 960) {
+        var scrollTop = $(window).scrollTop();
+        preheading.css("transform", "translateY(" + scrollTop * 0.3 + "px)");
+      }
+    });
+
+  })();
+
   var MouseButtonEffect = (function () {
     var hoverWrapper = $(".hover-wrapper");
 

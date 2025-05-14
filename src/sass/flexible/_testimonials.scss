@@ -81,6 +81,7 @@
             display: flex;
             align-items: center;
             padding-top: 1.5rem;
+            text-transform: uppercase;
 
             @media screen and (min-width: $desktop_lg) {
                 padding-top: 4rem;

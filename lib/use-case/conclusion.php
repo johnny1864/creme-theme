@@ -31,7 +31,7 @@
                 <span>Read</span>
                 <span>More</span>
             </h2>
-            <a class="heading-font" href="">
+            <a class="heading-font" href="/case-study">
                 SEE more CASE STUDIES
             </a>
         </div>

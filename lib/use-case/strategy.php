@@ -52,7 +52,7 @@
                     <?php elseif($item['video']) : ?>
                         <video loading="lazy" autoplay loop muted playsinline>
                                 <source
-                                    src="<?php echo esc_url( $fields['video'] ); ?>"
+                                    src="<?php echo esc_url( $item['video']['url'] ); ?>"
                                     type="video/mp4"
                                 >
                             Your browser does not support the video tag.
@@ -96,7 +96,7 @@
                     <?php elseif($item['video']) : ?>
                         <video loading="lazy" autoplay loop muted playsinline>
                                 <source
-                                    src="<?php echo esc_url( $fields['video'] ); ?>"
+                                    src="<?php echo esc_url( $item['video']['url'] ); ?>"
                                     type="video/mp4"
                                 >
                             Your browser does not support the video tag.

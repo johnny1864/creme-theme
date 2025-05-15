@@ -59,6 +59,9 @@
 
         h1 {
             margin-bottom: 1em;
+            @media screen and (max-width: $mobile ) {
+                word-wrap: break-word;
+            }
         }
 
         .hero__image-wrapper {

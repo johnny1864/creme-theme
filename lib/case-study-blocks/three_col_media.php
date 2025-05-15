@@ -15,7 +15,7 @@
                     <?php elseif($column['video']) : ?>
                         <video loading="lazy" autoplay loop muted playsinline>
                                 <source
-                                    src="<?php echo esc_url( $fields['video'] ); ?>"
+                                    src="<?php echo esc_url( $column['video']['url'] ); ?>"
                                     type="video/mp4"
                                 >
                             Your browser does not support the video tag.

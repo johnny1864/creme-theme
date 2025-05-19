@@ -585,7 +585,6 @@ code {
 }
 
 .media {
-    
 
     &__grid {
         display: flex;
@@ -615,6 +614,18 @@ code {
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+    }
+}
+
+ul {
+    &.unstyle {
+        padding: 0;
+        margin: 0;
+        li {
+            &::before{
+                display: none;
+            }
         }
     }
 }

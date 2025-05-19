@@ -589,7 +589,7 @@ jQuery(document).ready(function ($) {
         var scrollTop = $(window).scrollTop();
         bgImage.css("transform", "translateY(" + scrollTop * 0.3 + "px)");
         leftText.css("transform", "translateY(" + scrollTop * 0.6 + "px)");
-        rigthText.css("transform", "translateY(" + scrollTop * 0.2 + "px)");
+        rigthText.css("transform", "translateY(-" + scrollTop * 0.2 + "px)");
       }
     });
   })();
@@ -602,7 +602,6 @@ jQuery(document).ready(function ($) {
       return;
     }
 
-    console.log('hero basic');
     $(window).on("scroll", function () {
       if (window.innerWidth > 960) {
         var scrollTop = $(window).scrollTop();

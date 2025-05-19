@@ -32,19 +32,24 @@
         left: 0;
         right: 0;
         z-index: 999;
-        transition: background .15s ease, box-shadow .15s ease, border-color .15s ease;
+        transition: background .25s ease, box-shadow .15s ease, border-color .15s ease;
 
         &--scrolled {
-            // @include box-shadow;
+            @include box-shadow;
             margin: 0;
             // mix-blend-mode: difference;
 
-            // background: $white;
+            background: $white;
             // border-bottom-color: $xlgray;
 
             .btn {
                 background-color: $purple;
                 color: $cream;
+
+                &:hover {
+                    background-color: $cream;
+                    color: $purple;
+                }
             }
         }
     }

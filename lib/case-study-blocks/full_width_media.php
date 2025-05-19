@@ -10,7 +10,7 @@
             <?php elseif(get_sub_field('video')) : ?>
                 <video loading="lazy" autoplay loop muted playsinline>
                         <source
-                            src="<?php echo esc_url( get_sub_field('video') ); ?>"
+                            src="<?php echo esc_url( get_sub_field('video')['url'] ); ?>"
                             type="video/mp4"
                         >
                     Your browser does not support the video tag.

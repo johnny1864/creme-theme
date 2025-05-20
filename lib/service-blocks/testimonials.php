@@ -31,11 +31,11 @@
                                 <?php endif; ?>
                                 <div class="testimonials__card-meta">
                                     <?php if ( ! empty( get_field('author_icon') ) ) : ?>
-                                        <span class="testimonials__card-author-icon">
+                                        <!-- <span class="testimonials__card-author-icon">
                                             <div class="positioner">
                                             <?php echo getIMG(get_field('author_icon'), 'sm'); ?>
                                             </div> 
-                                        </span>
+                                        </span> -->
                                     <?php endif; ?>
                                     
                                     <span class="testimonials__card-author heading-font">

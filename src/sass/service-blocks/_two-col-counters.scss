@@ -47,7 +47,7 @@
 
     &__grid {
         padding: 1.5rem 0;
-        
+
         @media screen and (min-width: $laptop) {
             display: flex;
             justify-content: space-around;
@@ -58,7 +58,7 @@
         }
 
         @media screen and (min-width: $desktop_lg) {
-            width: 90%;
+            width: 92%;
             margin-left: auto;
         }
     }

@@ -26,10 +26,18 @@
         }
     }
 
+    &__title {
+        margin-bottom: 1rem;
+    }
+
     &__title,
     p,
     .btn {
         transition: all ease 200ms;
+    }
+
+    &__service {
+        margin-top: 0;
     }
 
     &__content {

@@ -41,9 +41,19 @@
     </a>
     <div class="case-study-card__content">
         <h4 class="case-study-card__title"><?php the_title(); ?></h4>
-        <p class="heading-font text-uppercase">
-            <?php echo $card_settings['featured_service']; ?>
-        </p>
+        <?php
+            if(!empty($hero['services'])) { 
+                foreach($hero['services'] as $service) { 
+                    $serviceTitle = get_the_title($service->ID);
+                    ?>
+                    <p class="case-study-card__service heading-font text-uppercase">
+                        <?php echo $serviceTitle; ?>
+                    </p>
+                <?php
+                }
+            }
+        ?>
+        
         <a class="case-study-card__btn btn" href="<?php echo $permalink; ?>">
             <span class="dot">&#9679;</span> View Project
         </a>

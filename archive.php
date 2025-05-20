@@ -22,36 +22,29 @@ $title = $hero['headline'];
 <section class="archive-content">
     <div class="container">
 
-        <div class="blog-roll-sort">
-            <p class="blog-roll-sort__label heading-font">CASE STUDIES</p>
+        <?php if($post_type = "case-study") : ?>
+            <?php $services = get_field('filter_categories', 'option'); ?>
+                <div class="blog-roll-sort">
+                    <p class="blog-roll-sort__label heading-font">CASE STUDIES</p>
+                    <div class="categories-filter ">
+                    <button data-cat="all"
+                    class="category-tag active">All Categories</button>
+                    <?php 
+                        foreach($services as $post) :
+                            setup_postdata( $post );
+                    ?>
 
-            <div class="categories-filter ">
-            <button data-cat="all"
-            class="category-tag active">All Categories</button>
-             <?php 
-                $args = array(
-                    'post_type'      => 'service',
-                    'posts_per_page' => -1, // Get all services
-                    'orderby'        => 'menu_order',
-                    'order'          => 'ASC',
-                );
+                    <button data-cat="<?php echo strtolower( str_replace( ' ', '-', get_the_title() ) ); ?>"
+                                    class="category-tag"><?php echo the_title(); ?></button>
 
-                $services_query = new WP_Query($args);
-
-                if ($services_query->have_posts()) : 
-                while ($services_query->have_posts()) : $services_query->the_post();
-             ?>
-
-             <button data-cat="<?php echo strtolower( str_replace( ' ', '-', get_the_title() ) ); ?>"
-                            class="category-tag"><?php echo the_title(); ?></button>
-
-             <?php 
-                endwhile;
-                wp_reset_postdata();
-                endif; 
-            ?>
-            </div>
-        </div>
+                    <?php 
+                        endforeach;
+                        wp_reset_postdata();
+                        
+                    ?>
+                    </div>
+                </div>
+            <?php endif; ?>
 
         <div class="blog-posts loadmore-container">
 

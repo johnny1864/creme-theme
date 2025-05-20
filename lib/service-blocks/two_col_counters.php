@@ -2,7 +2,7 @@
 	$heading = get_sub_field('heading');
 	$counters = get_sub_field('counter');
 
-
+    $arr_count = count($counters);
 	$attr = buildAttr(array('id'=>$id,'class'=>$classList));
 ?>
 
@@ -44,7 +44,9 @@
             // endif; 
              endforeach; 
              ?>
-       
+             <?php if( $arr_count % 2 != 0 ) : ?>
+                <div class="two-col-counters__block"></div>
+            <?php endif; ?>
         <!-- <div class="two-col-counters__grid-col">
             <?php 
                 foreach($counters as $index => $block) : 

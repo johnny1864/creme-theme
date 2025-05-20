@@ -64,7 +64,7 @@
                                 ?>     
                                     
                                     <a
-                                        class="btn btn--secondary image-content-blocks__block-link"
+                                        class="image-content-blocks__block-link btn"
                                         href="<?php echo esc_url( $cta['url'] ); ?>"
                                         target="<?php echo esc_attr( $cta['target'] ); ?>"
                                     >

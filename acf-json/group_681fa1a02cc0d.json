@@ -833,9 +833,19 @@
                             "toolbar": "full",
                             "media_upload": 1,
                             "delay": 0
-                        },
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_682ca901cc49c": {
+                    "key": "layout_682ca901cc49c",
+                    "name": "read_more",
+                    "label": "Read More",
+                    "display": "block",
+                    "sub_fields": [
                         {
-                            "key": "field_68210ebbc1559",
+                            "key": "field_682ca901cc4a3",
                             "label": "Case Studies",
                             "name": "case_studies",
                             "aria-label": "",
@@ -904,5 +914,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1746997237
+    "modified": 1747757340
 }

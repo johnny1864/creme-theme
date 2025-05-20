@@ -549,6 +549,50 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_682ca43cca8ad": {
+                    "key": "layout_682ca43cca8ad",
+                    "name": "read_more",
+                    "label": "Read More",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_682ca43cca8af",
+                            "label": "Case Studies",
+                            "name": "case_studies",
+                            "aria-label": "",
+                            "type": "relationship",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "post_type": [
+                                "case-study"
+                            ],
+                            "post_status": [
+                                "publish"
+                            ],
+                            "taxonomy": "",
+                            "filters": [
+                                "search",
+                                "post_type",
+                                "taxonomy"
+                            ],
+                            "return_format": "object",
+                            "min": "",
+                            "max": 2,
+                            "allow_in_bindings": 0,
+                            "elements": "",
+                            "bidirectional": 0,
+                            "bidirectional_target": []
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -579,5 +623,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747198887
+    "modified": 1747756366
 }

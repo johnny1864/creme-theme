@@ -284,6 +284,7 @@ button {
     @extend %button;
     background: $cream;
     color: $purple;
+    text-decoration: none;
 
     &:hover {
         color: $cream;
@@ -585,7 +586,6 @@ code {
 }
 
 .media {
-
     &__grid {
         display: flex;
         justify-content: space-between;

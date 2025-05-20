@@ -72,6 +72,12 @@
             &-right {
                 width: 50%;
             }
+
+            .h2 {
+                span {
+                    display: block;
+                }
+            }
         }
 
         @media screen and (min-width: $desktop_lg) {

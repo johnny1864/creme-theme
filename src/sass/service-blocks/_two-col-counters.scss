@@ -21,6 +21,11 @@
         @media screen and (min-width: $laptop) {
             padding: 1.5rem 0;
             width: 45%;
+
+            &-wrapper {
+                width: 100%;
+            }
+
             &-title {
                 flex-direction: row;
 
@@ -41,6 +46,8 @@
     }
 
     &__grid {
+        padding: 1.5rem 0;
+        
         @media screen and (min-width: $laptop) {
             display: flex;
             justify-content: space-around;

@@ -82,8 +82,16 @@
 
         @media screen and (min-width: $desktop_lg) {
             &-right {
-                width: calc(50% - 3rem);
+                width: calc(60% - 3rem);
                 margin-left: auto;
+            }
+        }
+
+        @media screen and (min-width: 1500px) {
+            .h2 {
+                span {
+                    white-space: nowrap;
+                }
             }
         }
 

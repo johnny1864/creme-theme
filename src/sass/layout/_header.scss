@@ -45,10 +45,12 @@
             .btn {
                 background-color: $purple;
                 color: $cream;
+                border: 2px solid transparent;
 
                 &:hover {
                     background-color: $cream;
                     color: $purple;
+                    border-color: $purple;
                 }
             }
         }

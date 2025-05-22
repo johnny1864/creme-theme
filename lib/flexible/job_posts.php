@@ -23,7 +23,7 @@
                 <div class="counters__block-wrapper">
                     <div class="job-posts__block-content">
                         <span class="counters__block-count h6">
-                            (0<?php echo $count + 1; ?>)
+                            (<?php if($count < 9) ?>0<?php endif; ?><?php echo $count + 1; ?>)
                         </span>
                         <h3>
                             <?php echo $block['title']; ?>

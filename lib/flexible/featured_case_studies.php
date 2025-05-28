@@ -3,6 +3,7 @@
     $heading2 = get_sub_field('second_heading');
 	$case_studies = get_sub_field('case_studies');
     $label = get_sub_field('label');
+    $cta = get_sub_field('cta');
 
 	$attr = buildAttr(array('id'=>$id,'class'=>$classList));
 ?>
@@ -24,9 +25,16 @@
                 </h2>
             </div>
             <div class="text-center featured-case-studies__cta">
-                <a class="heading-font" href="#">
-                    SEE ALL CASE STUDIES
-                </a>
+                <?php if(!empty($cta)):?>
+                    <a
+                        class="heading-font text-uppercase"
+                        href="<?php echo esc_url( $cta['url'] ); ?>"
+                        target="<?php echo esc_attr( $cta['target'] ); ?>"
+                    >
+                        <?php echo esc_html( $cta['title'] ); ?>
+                    </a>
+                <?php endif; ?>
+                
             </div>
         </div>
         <?php endif; ?>

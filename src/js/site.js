@@ -913,11 +913,11 @@ jQuery(document).ready(function ($) {
         return
       }
 
-      filterPost(category)
+      filterPosts(category)
 
     });
 
-    function filterPost(category) {
+    function filterPosts(category) {
       blogPosts.each((index, post )=> {
         const postCategories = $(post).data('categories');
         
@@ -932,7 +932,7 @@ jQuery(document).ready(function ($) {
     if(searchParams.has('filter')){
       let param = searchParams.get('filter')
       console.log(param);
-      //filterPost()
+      filterPosts(param)
     }
 
   }());
@@ -945,7 +945,6 @@ jQuery(document).ready(function ($) {
 
     if(!blogRoll.length) return;
 
-    console.log(blogPosts);
     filterBtn.click(function() {
       filterBtn.removeClass('active');
       $(this).addClass('active');
@@ -956,16 +955,27 @@ jQuery(document).ready(function ($) {
         return
       }
 
-      console.log('btn click ' + category);
+      filterPosts(category);
+    });
 
+    function filterPosts(category) {
       blogPosts.each((index, post )=> {
         const postCategories = $(post).data('categories');
         console.log(postCategories.includes(category))
         if(!postCategories.includes(category)){
           $(post).fadeOut();
         }
-      })
-    });
+      });
+    }
+
+    const searchParams = new URLSearchParams(window.location.search)
+    console.log(searchParams.has('filter'));
+    if(searchParams.has('filter')){
+      let param = searchParams.get('filter')
+      console.log(param);
+      filterPosts(param)
+    }
+
 
   }());
 

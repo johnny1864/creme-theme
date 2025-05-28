@@ -948,7 +948,6 @@ jQuery(document).ready(function ($) {
     filterBtn.click(function() {
       filterBtn.removeClass('active');
       $(this).addClass('active');
-      console.log('click');
       const category = $(this).data('cat');
       blogPosts.fadeIn();
       if(category == "all") {
@@ -972,7 +971,8 @@ jQuery(document).ready(function ($) {
     console.log(searchParams.has('filter'));
     if(searchParams.has('filter')){
       let param = searchParams.get('filter')
-      console.log(param);
+      filterBtn.removeClass('active');
+      $(`.categories-filter .category-tag[data-cat=${param}]`).addClass('active')
       filterPosts(param)
     }
 

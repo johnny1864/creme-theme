@@ -135,27 +135,6 @@
                     "mime_types": "",
                     "allow_in_bindings": 0,
                     "preview_size": "medium"
-                },
-                {
-                    "key": "field_681fa1a06772b",
-                    "label": "Featured Service",
-                    "name": "featured_service",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 0,
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
                 }
             ]
         },
@@ -914,5 +893,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1747757340
+    "modified": 1748465353
 }

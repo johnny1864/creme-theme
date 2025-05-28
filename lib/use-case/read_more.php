@@ -1,5 +1,11 @@
 <?php
     $case_studies = get_sub_field('case_studies');
+    $service = get_field('hero')['services'];
+    $service_handle = "";
+    if($service) {
+        $service = get_field('hero')['services'][0];
+        $service_handle = strtolower( str_replace( ' ', '-', get_the_title($service->ID) ) );
+    }
 
 	$attr = buildAttr(array('id'=>$id,'class'=>$classList));
 ?>
@@ -12,7 +18,7 @@
                 <span>Read</span>
                 <span>More</span>
             </h2>
-            <a class="heading-font" href="/case-study">
+            <a class="heading-font" href="/case-study?filter=<?php echo $service_handle; ?>">
                 SEE more CASE STUDIES
             </a>
         </div>

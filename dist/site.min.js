@@ -971,8 +971,10 @@ jQuery(document).ready(function ($) {
     console.log(searchParams.has('filter'));
     if(searchParams.has('filter')){
       let param = searchParams.get('filter')
+      param = param.replace('-%26', '&');
+      console.log(param);
       filterBtn.removeClass('active');
-      $(`.categories-filter .category-tag[data-cat=${param}]`).addClass('active')
+      $(`.categories-filter .category-tag[data-cat='${param}']`).addClass('active')
       filterPosts(param)
     }
 

@@ -3,7 +3,10 @@
     $service = get_field('hero')['services'][0];
     $service_handle = "";
     if($service) {
-        $service_handle = strtolower( str_replace( ' ', '-', get_the_title($service->ID) ) );
+        $service = get_field('hero')['services'][0];
+        $service_title = str_replace("&", "%26", get_the_title($service->ID));
+        $service_title = str_replace( '#038;', '', $service_title );
+        $service_handle = strtolower( str_replace( ' ', '-', $service_title ) );
     }
     
 	$attr = buildAttr(array('id'=>$id,'class'=>$classList));

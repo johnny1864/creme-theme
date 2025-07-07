@@ -40,7 +40,7 @@ foreach ( $categories as $cat ) {
 
             <h3 class="post-card__title">
                 <?php the_title(); ?>
-            </h3>
+            </h3> 
 
             <div class="post-card__meta heading-font text-uppercase">
                 <p class="post-card__meta-author">

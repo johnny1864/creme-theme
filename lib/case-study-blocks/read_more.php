@@ -20,7 +20,7 @@
                 <span>Read</span>
                 <span>More</span>
             </h2>
-            <a class="heading-font" href="/case-study?filter=<?php echo $service_handle; ?>">
+            <a class="heading-font" href="/case-studies?filter=<?php echo $service_handle; ?>">
                 SEE more CASE STUDIES
             </a>
         </div>

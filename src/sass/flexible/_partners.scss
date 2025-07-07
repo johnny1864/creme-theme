@@ -26,7 +26,7 @@
                 justify-content: center;
                 align-items: center;
                 top: -40px;
-                right: 1.1rem;
+                right: 0.9em;
                 width: 120px;
                 aspect-ratio: 1/1;
                 transform: translateX(100%);
@@ -40,9 +40,14 @@
 
 
             @media screen and (min-width: $laptop) {
-                &.has-image {
+                &:nth-last-of-type(odd) {
                     span {
                         color: $red;
+                    }
+                }
+                &.has-image {
+                    span {
+                        //color: $red;
                     }
                 }
             }

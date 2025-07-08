@@ -195,6 +195,10 @@ h6,
     font-size: $display-1_mobile;
 
     @media (min-width: $laptop) {
+        font-size: 12rem
+    }
+
+    @media (min-width: $desktop_lg) {
         font-size: $display-1;
     }
 }

@@ -144,10 +144,8 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/TextPlugin.min.js"></script>
-<script src="<?php echo get_template_directory_uri(); ?>/gsap/LottieSplitText.js" type="module"></script>
 <?php wp_footer(); ?>
 
 <?php echo get_field('body_scripts_bottom', 'option'); ?>

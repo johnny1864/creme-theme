@@ -1,0 +1,10 @@
+.partners {
+    .section__header {
+        padding-bottom: 2rem;
+        
+        @media screen and (min-width: $laptop) {
+            padding: 0;
+            padding-bottom: 5rem;
+        }
+    }
+}

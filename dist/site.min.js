@@ -950,6 +950,7 @@ jQuery(document).ready(function ($) {
       $(this).addClass('active');
       const category = $(this).data('cat');
       blogPosts.fadeIn();
+      
       if(category == "all") {
         return
       }
@@ -960,7 +961,7 @@ jQuery(document).ready(function ($) {
     function filterPosts(category) {
       blogPosts.each((index, post )=> {
         const postCategories = $(post).data('categories');
-        console.log(postCategories.includes(category))
+        // console.log(postCategories.includes(category))
         if(!postCategories.includes(category)){
           $(post).fadeOut();
         }
@@ -968,14 +969,20 @@ jQuery(document).ready(function ($) {
     }
 
     const searchParams = new URLSearchParams(window.location.search)
-    console.log(searchParams.has('filter'));
+    // console.log(searchParams.has('filter'));
     if(searchParams.has('filter')){
       let param = searchParams.get('filter')
       param = param.replace('-%26', '&');
-      console.log(param);
-      filterBtn.removeClass('active');
-      $(`.categories-filter .category-tag[data-cat='${param}']`).addClass('active')
-      filterPosts(param)
+      // console.log(param);
+
+      //filterBtn.removeClass('active');
+      $(`.categories-filter .category-tag[data-cat='${param}']`).trigger('click');
+      // filterPosts(param)
+
+      /* filterBtn.each(function() {
+        const cat = $(this).data('cat');
+        console.log(cat);
+      }) */
     }
 
 

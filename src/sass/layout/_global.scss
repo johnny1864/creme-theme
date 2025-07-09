@@ -583,6 +583,7 @@ code {
     border: none;
     text-transform: uppercase;
     transition: all ease 200ms;
+    text-decoration: none;
 
     &.active {
         background-color: $purple;

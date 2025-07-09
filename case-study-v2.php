@@ -1,6 +1,6 @@
 <?php 
 /*
-Template Name: Use Case
+Template Name: General
 Template Post Type: case-study
 */
 ?>

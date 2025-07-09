@@ -18,10 +18,15 @@
         
         <?php if(!empty($hero['services'])):?>
             <div class="hero--use-case__services">
-                <?php foreach($hero['services'] as $service) : ?>
-                    <div class="service-tag category-tag">
+                <?php 
+                    foreach($hero['services'] as $service) : 
+                        $service_title = str_replace("&", "%26", get_the_title($service->ID));
+                        $service_title = str_replace( '#038;', '', $service_title );
+                        $service_handle = strtolower( str_replace( ' ', '-', $service_title ) );
+                ?>
+                    <a href="/case-studies?filter=<?php echo $service_handle; ?>" class="service-tag category-tag">
                         <?php echo get_the_title($service->ID); ?>
-                    </div>
+                    </a>
                 <?php endforeach; ?>   
             </div>
         <?php endif; ?>

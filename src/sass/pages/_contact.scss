@@ -53,6 +53,7 @@
     }
 
     &__block {
+        position: relative;
         padding: 1rem 0 2rem; 
         border-top: 1px solid rgba($gray, 0.5);
         color: $cream;
@@ -68,9 +69,31 @@
 
         @media screen and (min-width: $laptop) {
             display: flex;
+            border-color: transparent;
+            &:first-of-type{
+                .contact__block-left {
+                    &::before {
+                        width: 100%;
+                    }
+                }
+            }
+
             &-left,
             &-right {
                 width: 50%;
+            }
+
+            &-left {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: calc(50% - 3rem);
+                    height: 1px;
+                    background-color: rgba($gray, 0.5);
+                }
             }
 
             .h2 {
@@ -81,6 +104,11 @@
         }
 
         @media screen and (min-width: $desktop_lg) {
+            &-left {
+                &::before {
+                    width: calc(40% + 3rem);
+                }
+            }
             &-right {
                 width: calc(60% - 3rem);
                 margin-left: auto;

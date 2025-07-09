@@ -27,7 +27,7 @@
         <div class="contact__blocks">
               <?php foreach($section['blocks'] as $block) : ?>
               <div class="contact__block">
-                <div class="contact__block-left heading-font">
+                <div class="contact__block-left heading-font <?php if(empty($block['label'])) echo "half-line"; ?>">
                     <?php echo $block['label']; ?>
                 </div>
                 <div class="contact__block-right">

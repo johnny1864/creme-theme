@@ -4,6 +4,11 @@
 	$case_studies = get_sub_field('case_studies');
 
 	$attr = buildAttr(array('id'=>$id,'class'=>$classList));
+
+    $service_title = get_the_title();
+    $service_title = str_replace("&", "%26", $service_title);
+    $service_title = str_replace( '#038;', '', $service_title );
+    $service_handle = strtolower( str_replace( ' ', '-', $service_title ) );
 ?>
 
 <section <?php echo $attr; ?>>
@@ -18,7 +23,7 @@
                 </h2>
             </div>
             <div class="text-center featured-case-studies__cta">
-                <a class="heading-font" href="#">
+                <a class="heading-font" href="/case-studies?filter=<?php echo $service_handle; ?>">
                     SEE ALL CASE STUDIES
                 </a>
             </div>

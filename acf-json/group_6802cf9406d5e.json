@@ -591,6 +591,13 @@
                 "operator": "!=",
                 "value": "case-study-v2.php"
             }
+        ],
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "single-case-study.php"
+            }
         ]
     ],
     "menu_order": 0,
@@ -602,5 +609,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748465343
+    "modified": 1752095223
 }

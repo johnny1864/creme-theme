@@ -7,7 +7,20 @@
         </div>
 
         <?php if(!empty($hero['content'])):?>
-        <div class="hero__content"><?php echo $hero['content'];  ?></div>
+        <div class="hero__content">
+            <?php echo $hero['content'];  ?>
+            <?php if(!empty($hero_cta)):?>
+                <div class="hero__cta">
+                    <a
+                        class="btn btn--secondary"
+                        href="<?php echo esc_url( $hero_cta['url'] ); ?>"
+                        target="<?php echo esc_attr( $hero_cta['target'] ); ?>"
+                    >
+                        <?php echo esc_html( $hero_cta['title'] ); ?>
+                    </a>
+                </div>
+            <?php endif; ?>
+        </div>
         <?php endif; ?>
         
     </div>

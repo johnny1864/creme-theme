@@ -43,6 +43,11 @@ if (is_404()) {
     $title = get_the_title($post_id);
 }
 
+$hero_cta = "";
+if(!empty($hero['cta'])) {
+$hero_cta = $hero['cta'];
+}
+
 if(empty($title)) return;
 
 $classes = buildAttr('class', $classList);

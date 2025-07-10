@@ -90,7 +90,9 @@
 
                 &.half-line {
                     &::before {
-                        width: calc(50% - 1.5rem);
+                        width: calc(50% + 1rem);
+                        left: unset;
+                        right: 0;
                     }
                 }
             }
@@ -107,7 +109,7 @@
                 width: 48%;
                 &.half-line {
                     &::before {
-                        width: calc(40% + 3rem);
+                        width: calc(60% - 4rem);
                     }
                 }
             }

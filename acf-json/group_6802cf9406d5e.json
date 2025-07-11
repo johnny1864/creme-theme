@@ -589,14 +589,14 @@
             {
                 "param": "post_template",
                 "operator": "!=",
-                "value": "case-study-v2.php"
+                "value": "default"
             }
         ],
         [
             {
                 "param": "post_template",
                 "operator": "==",
-                "value": "single-case-study.php"
+                "value": "default"
             }
         ]
     ],
@@ -609,5 +609,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752095223
+    "modified": 1752192355
 }

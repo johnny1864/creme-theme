@@ -639,11 +639,12 @@ jQuery(document).ready(function ($) {
 
   var HeroImageAnimation = (function () {
     const trigger = $(".hero--animated");
-    const target = $(".hero--animated .hero__image-wrapper img");
+    const target = $(".hero--animated .hero__image-wrapper img, .hero--animated .hero__image-wrapper video");
     
     if (!trigger.length) return;
 
     gsap.registerPlugin(ScrollTrigger);
+    $('.hero--animated .hero__image-wrapper video').addClass('loaded');
 
     if( window.matchMedia("(min-width: 960px)").matches ) {
         let tl = gsap.timeline({

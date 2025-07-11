@@ -19,10 +19,18 @@
     .hero__image-wrapper {
         position: relative;
 
-        img {
+        img,
+        video {
             height: 100%;
             width: 100%;
             object-fit: cover;
+        }
+
+        video {
+            opacity: 0;
+            &.loaded {
+                opacity: 1;
+            }
         }
 
         @media screen and (min-width: $laptop) {

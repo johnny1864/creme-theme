@@ -3,7 +3,17 @@
         <h1 class="hero__title text-center"><?php echo $title; ?></h1>
 
         <div class="hero__image-wrapper">
-            <?php echo $feat_img;?>
+            <?php if(!empty($hero['video'])) : ?>
+                <video autoplay loop muted playsinline>
+                        <source
+                            src="<?php echo esc_url( $hero['video']['url'] ); ?>"
+                            type="video/mp4"
+                        >
+                    Your browser does not support the video tag.
+                </video>
+            <?php else : ?>
+                <?php echo $feat_img;?>
+            <?php endif; ?>
         </div>
 
         <?php if(!empty($hero['content'])):?>

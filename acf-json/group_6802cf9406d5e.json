@@ -588,8 +588,8 @@
             },
             {
                 "param": "post_template",
-                "operator": "!=",
-                "value": "default"
+                "operator": "==",
+                "value": "single-case-study.php"
             }
         ],
         [
@@ -609,5 +609,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1752192355
+    "modified": 1755062762
 }

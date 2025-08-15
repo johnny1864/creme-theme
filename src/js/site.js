@@ -846,6 +846,11 @@ jQuery(document).ready(function ($) {
         },
       });
       swiper.slideToLoop(1, 0);
+
+      if(window.innerWidth < 960) {
+        swiper.slideToLoop(2, 0);
+      } 
+
     });
   })();
 

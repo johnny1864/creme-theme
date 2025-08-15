@@ -15,7 +15,7 @@
     $post_type = $isPTArchive ? 'cpt_' . get_post_type() : get_post_type();
 
     $site_logo = getIMG( $global['logo']['ID'], 'sm', false, array('alt' => get_bloginfo( 'name' ), 'lazy' => false));
-    $site_logo = getSVG('logo', false, false);
+    // $site_logo = getSVG('logo', false, false);
     $site_favicon = $global['favicon'];
 ?>
 

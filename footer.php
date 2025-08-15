@@ -14,7 +14,7 @@
 <footer class="gfooter">
     <div class="gfooter__content">
         <div class="container">
-            <p class="copy desk-only">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>.</p>
+            
             <div class="gfooter__socials">
                 <ul>
                 <?php 
@@ -124,13 +124,19 @@
         </div>
     </div>
 
-    <div class="gfooter__bottom mob-only">
+    <div class="gfooter__bottom ">
         <div class="container">
-            <div class="gfooter__logo">
+            <div class="gfooter__logo mob-only">
                 <a class="site-logo" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
             </div>
             <div class="gfooter__copy">
-                <p class="copy">&copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>.</p>
+                <p class="copy">
+                    <?php if(!empty($footer['copyrights'])) : ?>
+                        <?php echo $footer['copyrights']; ?> 
+                    <?php else : ?>
+                        &copy; <?php echo date("Y"); ?> <?php bloginfo( 'name' ); ?>.
+                    <?php endif; ?>
+                </p>
             </div>
         </div>
     </div>

@@ -16,7 +16,7 @@
             </span>
         <?php endif; ?>
         <?php if(!empty($hero['content'])):?>
-        <div class="hero__content h6 text-center"><?php echo $hero['content'];  ?></div>
+        <div class="hero__content h6 text-center <?php if(empty($hero['right_text'])):?> padding-extra <?php endif; ?>"><?php echo $hero['content'];  ?></div>
         <?php endif; ?>
 
         <?php if(!empty($cta)):?>

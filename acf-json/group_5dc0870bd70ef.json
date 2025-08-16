@@ -87,6 +87,32 @@
                     "mime_types": "jpg, jpeg, png, svg, webp"
                 },
                 {
+                    "key": "field_689fe618ba7bf",
+                    "label": "Secondary Logo",
+                    "name": "secondary_logo",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Logo will be use when nav is tranparent",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "25",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "jpg, jpeg, png, svg, webp",
+                    "allow_in_bindings": 1,
+                    "preview_size": "thumbnail"
+                },
+                {
                     "key": "field_621a9cd0505bd",
                     "label": "Contact",
                     "name": "contact_info",
@@ -190,5 +216,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1745448752
+    "modified": 1755309709
 }

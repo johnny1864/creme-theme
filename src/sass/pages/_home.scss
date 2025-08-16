@@ -2,10 +2,27 @@
 
     .gheader {
 
+        .site-logo {
+                img{
+                    transition: all 200ms ease;
+                }
+            }
+
         &:not(.sticky--scrolled) {
             svg path {
                 fill: $cream;
             }
+
+            .site-logo {
+                img{
+                    opacity: 0;
+
+                    &.secondary-logo {
+                        opacity: 1;
+                    }
+                }
+            }
+            
         }
 
         @media screen and (min-width: $laptop) {

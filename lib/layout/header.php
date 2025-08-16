@@ -3,6 +3,7 @@
 
     $header = get_field('header', 'option');
     $cta = $header['header_cta'];
+    $global = get_field('global', 'option');
 
 	if($isHome) $classList[] = 'gheader--home';
 	elseif ($isBlog) $classList[] ='gheader--blog';
@@ -19,7 +20,14 @@
         <div class="container">
 
             <div class="gheader__logo">
-                <a class="site-logo" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
+                <a class="site-logo" href="<?php echo home_url(); ?>">
+                    <?php echo $site_logo; ?>
+                    <?php 
+                        if(!empty($global['secondary_logo'])) {
+                            echo getIMG($global['secondary_logo']['id'], 'sm', false, array('alt' => 'logo', 'lazy' => false, 'class' => 'secondary-logo') );
+                        }
+                    ?>
+                </a>
             </div>
 
             <nav class="global menu menu--main" aria-label="main navigation">

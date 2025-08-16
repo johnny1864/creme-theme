@@ -46,7 +46,7 @@
                 <h2 class="h1">
                     <?php echo $headline ?>
                 </h2>
-                <a class="site-logo desk-only" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
+                <!-- <a class="site-logo desk-only" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
                 <?php if(!empty($cta)):?>
                     
                     <a
@@ -57,7 +57,7 @@
                         <?php echo esc_html( $cta['title'] ); ?>
                     </a>
                     
-                <?php endif; ?>
+                <?php endif; ?> -->
             </div>
 
             <div class="row position-relative row__wrapper">
@@ -126,9 +126,9 @@
 
     <div class="gfooter__bottom ">
         <div class="container">
-            <div class="gfooter__logo mob-only">
+            <!-- <div class="gfooter__logo mob-only">
                 <a class="site-logo" href="<?php echo home_url(); ?>"><?php echo $site_logo; ?></a>
-            </div>
+            </div> -->
             <div class="gfooter__copy">
                 <p class="copy">
                     <?php if(!empty($footer['copyrights'])) : ?>

@@ -18,7 +18,11 @@
     <div class="counters">
         <?php foreach($counters as $count => $block) : ?>
             <?php $cta = $block['cta']; ?>
-            <a href="<?php echo $cta['url'] ?>" class="counters__block">
+            <?php if(!empty($cta)) : ?>
+                <a href="<?php echo $cta['url'] ?>" class="counters__block">
+            <?php else : ?>
+                <div class="counters__block">
+            <?php endif; ?>
                 <div class="counters__block-wrapper">
                     <div class="counters__block-title">
                         <span class="counters__block-count h6">
@@ -32,12 +36,18 @@
                         <p>
                             <?php echo $block['content']; ?>
                         </p>
+                        <?php if(!empty($cta)) : ?>
                         <span class="counters__block-cta-text text-uppercase heading-font">
                             <?php echo $cta['title'] ?>
                         </span>
+                        <?php endif; ?>
                     </div>
                 </div>
+            <?php if(!empty($cta)) : ?>
             </a>
+            <?php else : ?>
+               </div>
+            <?php endif; ?>
         <?php endforeach; ?>
     </div>
 

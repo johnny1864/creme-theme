@@ -998,7 +998,7 @@ jQuery(document).ready(function ($) {
 
     const mm = gsap.matchMedia();
 
-    mm.add("(min-width: 990px)", () => {
+    mm.add("(min-width: 960px)", () => {
       const section = document.querySelector(".image-slides__gallery");
       const topTrack = document.querySelector(
         ".image-slides__track--top",

@@ -16,7 +16,8 @@
         
         <?php endif; ?>
         <div class="image-slides__gallery text-center">
-            <div class="image-slides__track image-slides__track--top"> 
+            <div class="inner">
+                <div class="image-slides__track image-slides__track--top"> 
                 <?php foreach($top_gallery as $image) : ?>
                     <div class="image-slides__image">
                         <?= getIMG($image['ID']) ?>
@@ -30,6 +31,7 @@
                         <?= getIMG($image['ID']) ?>
                     </div>
                 <?php endforeach; ?>
+            </div>
             </div>
         </div>
     </div>

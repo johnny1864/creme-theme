@@ -10,6 +10,11 @@
     &__gallery {
         overflow: hidden;
         width: 100%;
+        .inner {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
     }
 
     &__track {
@@ -18,9 +23,7 @@
         width: 100%;
         overflow: auto;
 
-        &--top {
-            margin-bottom: 1.5rem;
-        }
+        
 
         @media screen and (min-width: $laptop) {
             width: max-content;

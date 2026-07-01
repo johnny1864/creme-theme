@@ -147,11 +147,7 @@
             
             @media screen and (min-width: $laptop) {
                 padding: 0;
-                padding-bottom: 6rem;
-            }
-
-            @media screen and (min-width: $desktop_lg) {
-                padding-bottom: 8rem;
+                padding-bottom: 3rem;
             }
         }
     }

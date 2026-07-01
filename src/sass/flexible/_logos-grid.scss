@@ -1,0 +1,33 @@
+.logos-grid {
+    background-color: $purple;
+
+    .section__header {
+        
+        .headline-label {
+            border-top: 1px solid rgba($color: $off-white, $alpha: 0.60);
+            padding-top: 1rem;
+            color: $cream;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
+
+        &-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+        }
+
+        @media screen and (min-width: $laptop) {
+            width: 90%;
+            margin: 0 auto;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem 1rem;
+            padding-bottom: 2rem;
+        }
+    }
+}

@@ -8,7 +8,7 @@ $feat_img = getIMG($feat_img_id, 'xl', true);
 $classList = array('hero', 'hero--'.$hero['style']);
 if(!empty($feat_img)) $classList[] = 'lazy';
 
-if($isHome){
+if( $isHome || $hero['style'] == "home" ){
     $classList[] = 'hero--home';
     $feat_img = getIMG($feat_img_id, 'xl');
 } elseif ($isBlog){

@@ -1,0 +1,158 @@
+.template-landing-page {
+    .gheader {
+
+        .site-logo {
+                img{
+                    transition: all 200ms ease;
+                }
+            }
+
+        &:not(.sticky--scrolled) {
+            svg path {
+                fill: $cream;
+            }
+
+            .site-logo {
+                img{
+                    opacity: 0;
+
+                    &.secondary-logo {
+                        opacity: 1;
+                    }
+                }
+            }
+            
+        }
+
+        @media screen and (min-width: $laptop) {
+            &:not(.sticky--scrolled) {
+                .menu-item__link {
+                    color: $cream;
+                }
+            }
+        }
+    }
+
+    .hero {
+        padding-top: 6rem;
+
+        @media screen and (min-width: $laptop) {
+            padding-top: 8rem;
+            padding-bottom: 6rem;
+
+            &__cta {
+                padding-top: 6rem;
+            }
+        }
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        &__title {
+            color: $cream;
+            @media screen and (min-width: $desktop_lg) {
+                span {
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        &__content {
+            color: $cream;
+            max-width: 560px;
+            margin: 0 auto;
+            display: none;
+            text-transform: unset;
+
+            @media screen and (min-width: $laptop) {
+                display: block;
+                &.padding-extra {
+                    padding: 4rem 0 5rem;
+                }     
+            }
+        }
+
+        &__left-text,
+        &__right-text {
+            display: block;
+            color: $red;
+        }
+
+        &__left-text {
+            text-align: right;
+            padding-bottom: 3rem;
+            padding-right: 2rem;
+        }
+
+        &__right-text {
+            padding: 3rem 1.5rem;
+        }
+
+        @media screen and (min-width: $laptop) {
+            &__left-text,
+            &__right-text {
+                pointer-events: none;
+            }
+            
+            &__left-text {
+                text-align: start;
+                padding-bottom: 1rem;
+            }
+
+            &__right-text {
+                text-align: right;
+            }
+        }
+
+        @media screen and (min-width: $desktop_lg) {
+            &__left-text {
+                position: absolute;
+                top: 25%;
+                left: 0;
+            }
+        }
+
+        
+    }
+
+    .featured-text {
+        margin-top: 0 !important;
+        background-color: $red;
+        
+        
+        h2, 
+        .h2 {
+            color: $purple;
+            span {
+                color: $cream;
+            }
+        }
+    }
+
+    .section, 
+    section {
+        margin-top: 0;
+        &__header {
+            padding-bottom: 2rem;
+            
+            @media screen and (min-width: $laptop) {
+                padding: 0;
+                padding-bottom: 6rem;
+            }
+
+            @media screen and (min-width: $desktop_lg) {
+                padding-bottom: 8rem;
+            }
+        }
+    }
+}

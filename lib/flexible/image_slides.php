@@ -15,12 +15,22 @@
             </div>
         
         <?php endif; ?>
-        <div class="logos-grid__grid text-center">
-            <?php foreach($logos as $logo) : ?>
-                <div class="logos-grid__grid-item">
-                    <?= getIMG($logo['ID']) ?>
-                </div>
-            <?php endforeach; ?>
+        <div class="image-slides__gallery text-center">
+            <div class="image-slides__track image-slides__track--top"> 
+                <?php foreach($top_gallery as $image) : ?>
+                    <div class="image-slides__image">
+                        <?= getIMG($image['ID']) ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+
+            <div class="image-slides__track image-slides__track--bottom"> 
+                <?php foreach($bottom_gallery as $image) : ?>
+                    <div class="image-slides__image">
+                        <?= getIMG($image['ID']) ?>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </div>
 </section>

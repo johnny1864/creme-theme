@@ -74,7 +74,7 @@ jQuery(document).ready(function ($) {
                 // window.location.hash = target;
               }
             }
-          }
+          },
         );
     }
 
@@ -245,7 +245,7 @@ jQuery(document).ready(function ($) {
       }
 
       $formSelectMenus = $(
-        ".select-menu select, .ginput_container_select select"
+        ".select-menu select, .ginput_container_select select",
       );
 
       function setFilled($input) {
@@ -355,7 +355,7 @@ jQuery(document).ready(function ($) {
           }
 
           $lightbox_content.html(
-            '<div class="video-embed">' + iframe + "</div>"
+            '<div class="video-embed">' + iframe + "</div>",
           );
         } else {
           if ($(this).data("lightbox-content")) {
@@ -371,7 +371,7 @@ jQuery(document).ready(function ($) {
 
         var classes = $(this).data("lightbox-classes");
         $lightbox.addClass("active").addClass(classes);
-      }
+      },
     );
 
     function closeModal($lightbox) {
@@ -558,7 +558,7 @@ jQuery(document).ready(function ($) {
 
           $this.toggleClass(
             "is-stuck",
-            window.scrollY + header_height >= $this_pos
+            window.scrollY + header_height >= $this_pos,
           );
           $this.css("top", header_height).attr("data-header-sticky", $this_pos);
         });
@@ -596,8 +596,8 @@ jQuery(document).ready(function ($) {
 
   var BasicHero = (function () {
     var hero = $(".hero--basic");
-    var preheading = hero.find('.preheading')
-  
+    var preheading = hero.find(".preheading");
+
     if (!preheading.length) {
       return;
     }
@@ -608,7 +608,6 @@ jQuery(document).ready(function ($) {
         preheading.css("transform", "translateY(" + scrollTop * 0.3 + "px)");
       }
     });
-
   })();
 
   var MouseButtonEffect = (function () {
@@ -639,105 +638,106 @@ jQuery(document).ready(function ($) {
 
   var HeroImageAnimation = (function () {
     const trigger = $(".hero--animated");
-    const target = $(".hero--animated .hero__image-wrapper img, .hero--animated .hero__image-wrapper video");
-    
+    const target = $(
+      ".hero--animated .hero__image-wrapper img, .hero--animated .hero__image-wrapper video",
+    );
+
     if (!trigger.length) return;
 
     gsap.registerPlugin(ScrollTrigger);
-    $('.hero--animated .hero__image-wrapper video').addClass('loaded');
+    $(".hero--animated .hero__image-wrapper video").addClass("loaded");
 
-    if( window.matchMedia("(min-width: 960px)").matches ) {
-        let tl = gsap.timeline({
+    if (window.matchMedia("(min-width: 960px)").matches) {
+      let tl = gsap.timeline({
         scrollTrigger: {
-            trigger: trigger,
-            // trigger element - viewport
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
-            pin:true,
+          trigger: trigger,
+          // trigger element - viewport
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+          pin: true,
         },
-        });
+      });
 
-        tl.fromTo(
+      tl.fromTo(
         target,
         {
-            width: "10rem",
-            height: "10em",
+          width: "10rem",
+          height: "10em",
         },
         {
-            width: "100%",
-            height: "100%",
-            duration: 1,
-            ease: "none"
-        }
-        );
+          width: "100%",
+          height: "100%",
+          duration: 1,
+          ease: "none",
+        },
+      );
     }
   })();
 
   var HeroImageFullWidth = (function () {
     const trigger = $(".hero--full-image");
     const target = $(".hero--full-image .hero__image-wrapper img");
-    
+
     if (!trigger.length) return;
 
     gsap.registerPlugin(ScrollTrigger);
     console.log(window.matchMedia("(min-width: 960px)").matches);
-    if( window.matchMedia("(min-width: 960px)").matches ) {
-        let tl = gsap.timeline({
+    if (window.matchMedia("(min-width: 960px)").matches) {
+      let tl = gsap.timeline({
         scrollTrigger: {
-            trigger: trigger,
-            // trigger element - viewport
-            start: "top top",
-            end: "bottom bottom",
-            scrub: 1,
+          trigger: trigger,
+          // trigger element - viewport
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
         },
-        });
+      });
 
-        tl.fromTo(
+      tl.fromTo(
         target,
         {
-            width: "10rem",
+          width: "10rem",
         },
         {
-            width: "100%",
-            duration: 1,
-        
-        }
-        );
+          width: "100%",
+          duration: 1,
+        },
+      );
     }
   })();
 
   var SectionImageFullWidth = (function () {
     const trigger = $(".animated-image");
     const target = $(".animated-image img");
-    
+
     if (!trigger.length) return;
 
     gsap.registerPlugin(ScrollTrigger);
     // console.log(window.matchMedia("(min-width: 960px)").matches);
-    if( window.matchMedia("(min-width: 960px)").matches ) {
-        let tl = gsap.timeline({
-          scrollTrigger: {
-              trigger: trigger,
-              // trigger element - viewport
-              start: "top top",
-              end: "bottom bottom",
-              scrub: 1,
-              pin: true
-          },
-        });
+    if (window.matchMedia("(min-width: 960px)").matches) {
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: trigger,
+          // trigger element - viewport
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+          pin: true,
+        },
+      });
 
-        tl.fromTo(
+      tl.fromTo(
         target,
-          {
-              width: "10rem",
-          },
-          {
-              width: "100%",
-              duration: 4,
-              ease: "none"
-          }
-        );
+        {
+          width: "10rem",
+        },
+        {
+          width: "100%",
+          duration: 4,
+          ease: "none",
+        },
+      );
     }
   })();
 
@@ -799,7 +799,7 @@ jQuery(document).ready(function ($) {
           init: function () {
             //$(slider).find('.swiper-counter').text(this.realIndex + 1 + " / " + slidesQuantity);
             slider.querySelector(".swiper-counter").textContent =
-            this.realIndex + 1 + " / " + slidesQuantity;
+              this.realIndex + 1 + " / " + slidesQuantity;
           },
           slideChange: function () {
             slider.querySelector(".swiper-counter").textContent =
@@ -847,10 +847,9 @@ jQuery(document).ready(function ($) {
       });
       swiper.slideToLoop(1, 0);
 
-      if(window.innerWidth < 960) {
+      if (window.innerWidth < 960) {
         swiper.slideToLoop(2, 0);
-      } 
-
+      }
     });
   })();
 
@@ -872,7 +871,7 @@ jQuery(document).ready(function ($) {
       },
       {
         threshold: 0.0,
-      }
+      },
     );
 
     observer.observe($counters);
@@ -892,7 +891,7 @@ jQuery(document).ready(function ($) {
               step: function (now) {
                 $(this).text(Math.ceil(now));
               },
-            }
+            },
           );
       });
 
@@ -900,89 +899,87 @@ jQuery(document).ready(function ($) {
     }
   })();
 
-  var BlogFilter = (function(){
+  var BlogFilter = (function () {
+    const blogRoll = $(".blog-roll");
+    const filterBtn = blogRoll.find(".categories-filter .category-tag");
+    const blogPosts = blogRoll.find(".post-card");
+    const blogPostsItems = blogRoll.find(".blog-post-item");
 
-    const blogRoll = $('.blog-roll');
-    const filterBtn = blogRoll.find('.categories-filter .category-tag');
-    const blogPosts = blogRoll.find('.post-card');
-    const blogPostsItems = blogRoll.find('.blog-post-item')
+    if (!blogRoll.length) return;
 
-    if(!blogRoll.length) return;
+    filterBtn.click(function () {
+      filterBtn.removeClass("active");
+      $(this).addClass("active");
 
-    filterBtn.click(function() {
-      filterBtn.removeClass('active');
-      $(this).addClass('active');
-
-      const category = $(this).data('cat');
+      const category = $(this).data("cat");
       blogPostsItems.fadeIn();
-      if(category == "all") {
-        return
-      }
-
-      filterPosts(category)
-
-    });
-
-    function filterPosts(category) {
-      blogPosts.each((index, post )=> {
-        const postCategories = $(post).data('categories');
-        
-        if(!postCategories.includes(category)){
-          $(post).closest('.blog-post-item').fadeOut();
-        }
-      });
-    }
-
-    const searchParams = new URLSearchParams(window.location.search)
-    console.log(searchParams.has('filter'));
-    if(searchParams.has('filter')){
-      let param = searchParams.get('filter')
-      console.log(param);
-      filterPosts(param)
-    }
-
-  }());
-
-  var CaseStudyFilter = (function(){
-
-    const blogRoll = $('.archive-case-study .blog-posts');
-    const filterBtn = $('.categories-filter .category-tag');
-    const blogPosts = blogRoll.find('.case-study-card');
-
-    if(!blogRoll.length) return;
-
-    filterBtn.click(function() {
-      filterBtn.removeClass('active');
-      $(this).addClass('active');
-      const category = $(this).data('cat');
-      blogPosts.fadeIn();
-      
-      if(category == "all") {
-        return
+      if (category == "all") {
+        return;
       }
 
       filterPosts(category);
     });
 
     function filterPosts(category) {
-      blogPosts.each((index, post )=> {
-        const postCategories = $(post).data('categories');
+      blogPosts.each((index, post) => {
+        const postCategories = $(post).data("categories");
+
+        if (!postCategories.includes(category)) {
+          $(post).closest(".blog-post-item").fadeOut();
+        }
+      });
+    }
+
+    const searchParams = new URLSearchParams(window.location.search);
+    console.log(searchParams.has("filter"));
+    if (searchParams.has("filter")) {
+      let param = searchParams.get("filter");
+      console.log(param);
+      filterPosts(param);
+    }
+  })();
+
+  var CaseStudyFilter = (function () {
+    const blogRoll = $(".archive-case-study .blog-posts");
+    const filterBtn = $(".categories-filter .category-tag");
+    const blogPosts = blogRoll.find(".case-study-card");
+
+    if (!blogRoll.length) return;
+
+    filterBtn.click(function () {
+      filterBtn.removeClass("active");
+      $(this).addClass("active");
+      const category = $(this).data("cat");
+      blogPosts.fadeIn();
+
+      if (category == "all") {
+        return;
+      }
+
+      filterPosts(category);
+    });
+
+    function filterPosts(category) {
+      blogPosts.each((index, post) => {
+        const postCategories = $(post).data("categories");
         // console.log(postCategories.includes(category))
-        if(!postCategories.includes(category)){
+        if (!postCategories.includes(category)) {
           $(post).fadeOut();
         }
       });
     }
 
-    const searchParams = new URLSearchParams(window.location.search)
+    const searchParams = new URLSearchParams(window.location.search);
     // console.log(searchParams.has('filter'));
-    if(searchParams.has('filter')){
-      let param = searchParams.get('filter')
-      param = param.replace('-%26', '&');
+    if (searchParams.has("filter")) {
+      let param = searchParams.get("filter");
+      param = param.replace("-%26", "&");
       // console.log(param);
 
       //filterBtn.removeClass('active');
-      $(`.categories-filter .category-tag[data-cat='${param}']`).trigger('click');
+      $(`.categories-filter .category-tag[data-cat='${param}']`).trigger(
+        "click",
+      );
       // filterPosts(param)
 
       /* filterBtn.each(function() {
@@ -990,9 +987,81 @@ jQuery(document).ready(function ($) {
         console.log(cat);
       }) */
     }
+  })();
 
+  var ImageSlides = (function () {
+    const $section = $(".image-slides");
 
-  }());
+    if (!$section) return;
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 990px)", () => {
+      const section = document.querySelector(".image-slides__gallery");
+      const topTrack = document.querySelector(
+        ".image-slides__track--top",
+      );
+      const bottomTrack = document.querySelector(
+        ".image-slides__track--bottom",
+      );
+      const header = document.querySelector(".gheader");
+
+      if (!section || !topTrack || !bottomTrack) return;
+
+      const getScrollAmount = (track) => {
+        return track.scrollWidth - window.innerWidth;
+      };
+
+      const getMaxScrollAmount = () => {
+        return Math.max(
+          getScrollAmount(topTrack),
+          getScrollAmount(bottomTrack),
+        );
+      };
+
+      // Start bottom row shifted left so it can animate back to the right
+      gsap.set(bottomTrack, {
+        x: () => -getScrollAmount(bottomTrack),
+      });
+
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: section,
+          start: "top top",
+          end: () => `+=${getMaxScrollAmount()}`,
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+
+          onEnter: () => header?.classList.add("is-hidden"),
+          onEnterBack: () => header?.classList.add("is-hidden"),
+          onLeave: () => header?.classList.remove("is-hidden"),
+          onLeaveBack: () => header?.classList.remove("is-hidden"),
+        },
+      });
+
+      tl.to(
+        topTrack,
+        {
+          x: () => -getScrollAmount(topTrack),
+          ease: "none",
+        },
+        0,
+      );
+
+      tl.to(
+        bottomTrack,
+        {
+          x: 0,
+          ease: "none",
+        },
+        0,
+      );
+    });
+  })();
 
   var LoadMore = (function () {
     var $loadmore = $("#loadmore");

@@ -1,6 +1,10 @@
 .gheader {
     margin: 0;
 
+    &.is-hidden {
+        transform: translateY(-100%);
+    }
+
     .container {
         display: flex;
         align-items: center;
@@ -42,7 +46,7 @@
         left: 0;
         right: 0;
         z-index: 999;
-        transition: background .25s ease, box-shadow .15s ease, border-color .15s ease;
+        transition: all .25s ease, box-shadow .15s ease, border-color .15s ease;
 
         &--scrolled {
             @include box-shadow;

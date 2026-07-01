@@ -11,8 +11,8 @@
     <div class="container">
         <?php if(!empty($label_heading)): ?>
         
-            <div class="section__header">
-                <h2 class="headline-label"><?php echo $heading; ?></h2>
+            <div class="section__header section__header--label ">
+                <h2 class="headline-label"><?php echo $label_heading; ?></h2>
             </div>
         
         <?php endif; ?>
